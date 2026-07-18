@@ -77,7 +77,7 @@ Inputs: A05/S03B = exact gate, card and third-attempt continuity; `tourist_lock_
 
 ## S05A
 
-Inputs: S05 sketch = emphasis; referee sheet = identity; A03 = Korean setting. Referee only. Floor-level start on black futsal boots and black football socks, with a grounded stance and contact shadows; preserve the locked Korean referee's striped shirt and black shorts above. No tourist, card, stadium, captions or exaggerated expression.
+Inputs: S05 sketch = emphasis; referee sheet = identity; A03 = Korean setting. Referee only, tight floor-level boots close-up: show black futsal boots, black football socks, grounded stance and contact shadows, plus at most the lower edge of black shorts. No face or upper body, tourist, card, stadium, captions or exaggerated expression.
 
 ## S05B
 

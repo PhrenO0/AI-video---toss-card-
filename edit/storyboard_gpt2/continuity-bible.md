@@ -47,7 +47,7 @@
 - TOSS card before S10; inaccurate card artwork from S10 onward.
 - S02 face or cheek visible; S02 tourist side-on to the gate; suitcase standing parallel without travel inertia.
 - Any failure sequence other than exactly three failed taps (S02, S03A, S03B); a different card, TOSS card, camera eye contact or an extra attempt in S02/S03A/S03B/S04; S04 portrayed as an attempt, lacking its face-only 70–85mm downward-gaze reaction, or using the reader-level bottom viewpoint reserved for S03B.
-- S05A/S05B containing the tourist or omitting the referee's black futsal boots, black football socks, vertical body-axis continuity, whistle-at-mouth or stern face; S06 missing the referee's head or boots, or showing a tourist silhouette.
+- S05A containing the tourist, anything above the lower edge of the referee's shorts, or omitting the tight floor-level black futsal boots and black football socks; S05B containing the tourist or omitting the same referee's matched vertical body axis, whistle at mouth or stern face; S06 missing the referee's head or boots, or showing a tourist silhouette.
 - S13 with gate flaps not fully retracted inside their housings, an obstructed walking/suitcase path, actors above 65 percent, a non-quiet upper 30–35 percent copy-safe area, a left-hand card tag or a raised/non-left wrist watch.
 - S07 gaze away from screen-right; S09 referee moving left-to-right.
 - Fare gates, gate readers or the `타는 곳` panel appearing in S06/S08; a tourist silhouette in S06; S08 without the same A06 approach direction.

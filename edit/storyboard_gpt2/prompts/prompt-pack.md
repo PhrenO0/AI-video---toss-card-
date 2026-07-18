@@ -61,23 +61,31 @@ Inputs: S01 sketch = composition; A05 = mandatory environment reference. Use A05
 
 ## S02
 
-Inputs: S02 sketch = story beat only; A05 = exact environment; `tourist_lock_JP_v2.jpg` = exact identity and rear silhouette. Strict rear view from 2–3m behind and slightly above waist height; no face or cheek visible. Capture her finishing the last half-step toward G3 while facing the gates squarely. Weight settles on her left foot, the right heel is still moving, her right arm begins to rise toward the reader and the silver suitcase trails diagonally 30–40 degrees behind-left. Match ceiling light, floor contact shadow, subtle hair and blouse inertia. No card yet.
+Inputs: S02 sketch = story beat only; A05 = exact environment; `tourist_lock_JP_v2.jpg` = exact identity and rear silhouette. First failed tap: strict rear wide from 2–3m behind and slightly above waist height; no face or cheek visible. Capture her facing G3 squarely, presenting the same matte-gray unbranded card with her right hand at the reader; show the red failure X and closed flaps. Weight settles on her left foot, the right heel is still moving, and the silver suitcase trails diagonally 30–40 degrees behind-left. Match ceiling light, floor contact shadow, subtle hair and blouse inertia. No TOSS card, no camera eye contact, no extra attempt.
 
-## S03
+## S03A
 
-Inputs: S03 sketch = composition; A05/S02 = environment and blocking; `tourist_lock_JP_v2.jpg` = identity and straight-hair silhouette. First failed tap only. Use a 45-degree high angle over her right shoulder. Show her correct right hand presenting one generic matte-gray unbranded transit card flat over the G3 reader, a red failure X, closed flaps ahead and the suitcase behind-left. No TOSS colors or logo. Anatomically correct hand, reader and card contact.
+Inputs: S03 sketch = composition; A05/S02 = environment and blocking; `tourist_lock_JP_v2.jpg` = identity and straight-hair silhouette. Second failed tap only. Use a 45-degree high angle over her right shoulder. Show a small wrist correction as her correct right hand presents the same matte-gray unbranded card flat over the G3 reader, with a red failure X, closed flaps ahead and the suitcase behind-left. No TOSS card, no camera eye contact, no extra attempt. Anatomically correct hand, reader and card contact.
+
+## S03B
+
+Inputs: A05/S03A = exact gate, card and second-attempt continuity; `tourist_lock_JP_v2.jpg` = exact face, full bangs, eye shape, jawline and straight shoulder-length hair. Third failed tap only. Reader-level 28–35mm bottom view from beside the card sensor. The same matte-gray unbranded card and her right hand dominate the near lower foreground as she taps again. Beyond the card, her exact face is visible; her eyes look downward at the card-reader contact point, never at camera. Red failure state and closed flap. No TOSS card, no camera eye contact, no extra attempt, no exaggerated face or selfie angle.
 
 ## S04
 
-Inputs: A05/S03 = exact gate, card and second-attempt continuity; `tourist_lock_JP_v2.jpg` = exact face, full bangs, eye shape, jawline and straight shoulder-length hair. Second and final failed tap. Reader-level bottom view from beside the card sensor. The same generic matte-gray card and her right hand dominate the near lower foreground as she taps again. Beyond the card, her exact face is visible; her eyes look downward at the card-reader contact point, never at camera. Eyebrows draw together slightly and lips part minimally in restrained puzzlement. Red failure state, closed flap, no exaggerated face, no selfie angle, no TOSS card.
+Inputs: A05/S03B = exact gate, card and third-attempt continuity; `tourist_lock_JP_v2.jpg` = exact face, full bangs, eye shape, jawline and straight shoulder-length hair. Face reaction only, 70–85mm. Her gaze remains down at the card-reader contact point; eyebrows draw together slightly and lips part minimally in restrained puzzlement. Keep G3's red failure state and closed flap in soft contextual background. The same matte-gray unbranded card remains at the reader in her right hand. No TOSS card, no camera eye contact, no extra attempt, no exaggerated face or selfie angle.
 
-## S05
+## S05A
 
-Inputs: S05 sketch = emphasis; referee sheet = identity; A03 = Korean setting. Tight head-and-shoulders sports-broadcast portrait of the adult referee performing the ordinary action of blowing his black whistle. Full stern face visible, whistle naturally at mouth, hands outside frame, striped shirt and lanyard preserved, restrained pale radial streaks at background edges. No card, stadium, captions or exaggerated expression.
+Inputs: S05 sketch = emphasis; referee sheet = identity; A03 = Korean setting. Referee only. Floor-level start on black futsal boots and black football socks, with a grounded stance and contact shadows; preserve the locked Korean referee's striped shirt and black shorts above. No tourist, card, stadium, captions or exaggerated expression.
+
+## S05B
+
+Inputs: S05 sketch = emphasis; referee sheet = identity; S05A = exact referee and body-axis continuity; A03 = Korean setting. Referee only. Tight head-and-shoulders sports-broadcast portrait of the same referee on the same vertical body axis, black whistle naturally at his mouth and full stern face visible. Striped shirt and lanyard preserved, restrained pale radial streaks at background edges. No tourist, card, stadium, captions or exaggerated expression.
 
 ## S06
 
-Inputs: old S06 = story beat only; A06 = mandatory right-side corridor; `tourist_lock_JP_v2.jpg` and referee sheet = identity. True over-the-shoulder view from behind and slightly left of the tourist while her shoulders are still turning toward the whistle: her exact straight-haired rear head and left shoulder fill the soft-focus screen-left foreground. The referee, 6–8m away and slightly screen-right, looks at her, finishes the whistle and takes his first deliberate step. Preserve A06's restrained mounted signs, wall map, tiled columns, ceiling-light rhythm and floor axis. Match both people to the corridor light and contact shadows. No gates, gate readers, `타는 곳` panel, TOSS card or extra people.
+Inputs: old S06 = story beat only; A06 = mandatory right-side corridor; referee sheet = exact identity; S05A/S05B = referee continuity. 35–50mm full-body referee shot in A06, with head and black futsal boots fully visible. The same stern referee looks toward G3, finishes the whistle and takes his first deliberate step along the corridor axis. Preserve A06's restrained mounted signs, wall map, tiled columns, ceiling-light rhythm and floor axis. Match him to the corridor light and contact shadows. No tourist silhouette, no gates, gate readers, `타는 곳` panel, TOSS card or extra people.
 
 ## S07
 
@@ -85,7 +93,7 @@ Inputs: S07 sketch = composition; A02/A03 = direction; `tourist_lock_JP_v2.jpg` 
 
 ## S08
 
-Inputs: approved S06 + A06 = exact geography and approach axis; `tourist_lock_JP_v2.jpg` and referee sheet = identity. Continue one beat later from the same over-the-shoulder direction with the camera 10–15% closer and slightly lower. Referee advances two steps closer in a natural mid-stride, full body and shoes visible, stern deadpan face, whistle lowered and black watch on left wrist. Keep the same blurred sliver of the tourist's exact rear hair and left shoulder at screen-left. Opposite arm and leg cross naturally; front shoe has grounded contact and a plausible shadow. No gates, gate readers, `타는 곳` panel, TOSS card, runway symmetry or effects.
+Inputs: approved S06 + A06 = exact geography and approach axis; `tourist_lock_JP_v2.jpg` and referee sheet = identity. Continue one beat later along the same A06 corridor axis with the camera 10–15% closer and slightly lower. Referee advances two steps closer in a natural mid-stride, full body and shoes visible, stern deadpan face, whistle lowered and black watch on left wrist. Introduce a blurred sliver of the tourist's exact rear hair and left shoulder at screen-left only in this shot. Opposite arm and leg cross naturally; front shoe has grounded contact and a plausible shadow. No gates, gate readers, `타는 곳` panel, TOSS card, runway symmetry or effects.
 
 ## S09
 
@@ -105,4 +113,4 @@ Inputs: old S12 = reader design and success state only; A05 = mandatory gate-hal
 
 ## S13
 
-Inputs: S13 sketch = composition; A05/S12 = environment and continuity; `tourist_lock_JP_v2.jpg` and referee sheet = identities; exact TOSS PNG = product reference. Elegant side-profile vertical wide shot. The G3 glass flaps are now open. The exact supplied tourist with straight shoulder-length hair and her silver suitcase cross together toward the paid side while she glances back with relieved gratitude. Referee is physically on SCREEN-RIGHT of the reader, facing screen-left, and taps the exact card with his RIGHT HAND; his watch-bearing LEFT ARM hangs straight down. Preserve the slim physically suspended `타는 곳 / Tracks` panel from A05. Leave the upper-left third quiet and uncluttered for later copy. Calm premium end-frame light, no generated overlay text, readable gibberish, mirrored anatomy or hand swap.
+Inputs: S13 sketch = composition; A05/S12 = environment and continuity; `tourist_lock_JP_v2.jpg` and referee sheet = identities; exact TOSS PNG = product reference. Elegant side-profile vertical wide shot. Both black gate flaps are fully retracted inside the housings, leaving a clear walking and suitcase path through G3. The exact supplied tourist with straight shoulder-length hair and her silver suitcase cross together toward the paid side while she glances back with relieved gratitude. Referee is physically on SCREEN-RIGHT of the reader, facing screen-left, and taps the exact card with his RIGHT HAND; his watch-bearing LEFT WRIST hangs straight down. Preserve the slim physically suspended `타는 곳 / Tracks` panel from A05. Keep the upper 30–35 percent as a quiet copy-safe area and place actors below 65 percent of the frame. Calm premium end-frame light, no generated overlay text, readable gibberish, mirrored anatomy, hand swap or left-hand card tag.

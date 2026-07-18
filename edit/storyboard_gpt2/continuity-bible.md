@@ -17,8 +17,11 @@
 - The referee first appears 6–8m down the A06 right-side concourse, walks directly toward the tourist, then enters her near-gate frame right-to-left.
 - Only after the referee taps the G3 reader does the G3 flap open and the tourist cross with the suitcase.
 - A06 is the view obtained by turning the camera approximately 90° right from G3. It shares the same gray tile, restrained blue wayfinding, patterned floor and cool-white ceiling lights but contains no fare gates or `타는 곳` panel. S06 and S08 must share this exact corridor axis.
-- S02 is a strict rear view. The tourist completes her last half-step facing G3 squarely; no face or cheek is visible. Her right arm begins to rise and the suitcase trails diagonally behind-left.
-- S03 is the first failed tap from a high angle. S04 is the only retry, from reader-level bottom view. Both use the same generic matte-gray card; there is no third tap.
+- The failure sequence is exactly three failed taps: S02 is the first failed tap in a strict rear wide view, S03A is the second failed tap from a 45-degree high angle with a small wrist correction, and S03B is the third failed tap from a reader-level 28–35mm bottom view with card and right hand in the foreground. S04 is face reaction only at 70–85mm, with gaze still down at the card-reader contact; it is not an attempt.
+- Every failure-sequence prompt uses the same matte-gray unbranded card in the tourist's right hand and explicitly prohibits a TOSS card, camera eye contact and an extra attempt. S02 remains strict rear: no face or cheek is visible, and the suitcase trails diagonally behind-left.
+- S05A is referee only: black futsal boots and black football socks in a floor-level start. S05B is referee only: the same referee remains on the same vertical body axis with whistle at mouth and stern face.
+- S06 is a 35–50mm full-body referee shot in A06: head and boots must be visible, with no tourist silhouette.
+- S13 has both black gate flaps fully retracted inside the housings, creating a clear walking and suitcase path. Keep the upper 30–35 percent quiet and copy-safe with all actors below 65 percent; use the right-hand card tag and keep the watch on the lowered left wrist.
 
 ## Character lock
 
@@ -43,7 +46,9 @@
 - Extra hands, fingers, arms, cards, people or mirrored anatomy.
 - TOSS card before S10; inaccurate card artwork from S10 onward.
 - S02 face or cheek visible; S02 tourist side-on to the gate; suitcase standing parallel without travel inertia.
-- S03/S04 using different cards, more than two failed taps, S04 eye contact with camera, exaggerated open mouth or missing low reader viewpoint.
+- Any failure sequence other than exactly three failed taps (S02, S03A, S03B); a different card, TOSS card, camera eye contact or an extra attempt in S02/S03A/S03B/S04; S04 portrayed as an attempt, lacking its face-only 70–85mm downward-gaze reaction, or using the reader-level bottom viewpoint reserved for S03B.
+- S05A/S05B containing the tourist or omitting the referee's black futsal boots, black football socks, vertical body-axis continuity, whistle-at-mouth or stern face; S06 missing the referee's head or boots, or showing a tourist silhouette.
+- S13 with gate flaps not fully retracted inside their housings, an obstructed walking/suitcase path, actors above 65 percent, a non-quiet upper 30–35 percent copy-safe area, a left-hand card tag or a raised/non-left wrist watch.
 - S07 gaze away from screen-right; S09 referee moving left-to-right.
-- Fare gates, gate readers or the `타는 곳` panel appearing in S06/S08; S06 without the tourist over-the-shoulder foreground; S08 without the same A06 approach direction.
+- Fare gates, gate readers or the `타는 곳` panel appearing in S06/S08; a tourist silhouette in S06; S08 without the same A06 approach direction.
 - Floating, paper-thin or oversized signs; repeated blue placards; crisp unreadable generated text; perfect showroom symmetry.

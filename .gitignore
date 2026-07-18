@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 *_candidate_*.png
+.superpowers/

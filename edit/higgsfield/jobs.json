@@ -1,0 +1,212 @@
+{
+  "media": {
+    "referee_sheet": {
+      "id": "aa977e6e-b34b-4a64-8d72-265297cf4062",
+      "type": "image",
+      "filename": "b55b92ad-5b3c-40e4-adb1-c9b8ba492165.png"
+    },
+    "tourist_story": {
+      "id": "75b4a330-a3b7-4689-9771-e48641b03b96",
+      "type": "image",
+      "filename": "스토리 1.png"
+    },
+    "storyboard_master": {
+      "id": "7ec31a15-3893-43eb-9d9c-bb2be67941ce",
+      "type": "image",
+      "filename": "장소와 인물.png"
+    },
+    "toss_card_exact": {
+      "id": "4f243f6d-df25-4d57-9be3-1bf00d4f59a6",
+      "type": "image",
+      "filename": "pre-card-hologram-front (1).png"
+    }
+  },
+  "image_jobs": {
+    "tourist_lock": {
+      "prompt_file": "edit/prompts/01_tourist_lock.md",
+      "model": "gpt_image_2",
+      "aspect_ratio": "16:9",
+      "resolution": "2k",
+      "quality": "high",
+      "reference_media": [
+        "7ec31a15-3893-43eb-9d9c-bb2be67941ce",
+        "75b4a330-a3b7-4689-9771-e48641b03b96"
+      ],
+      "variants": [
+        {
+          "id": "228e3063-d82c-4841-8748-60f07051def1",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_162348_228e3063-d82c-4841-8748-60f07051def1.png",
+          "local_path": "edit/generated/stills/tourist_lock_A.png"
+        },
+        {
+          "id": "0971519c-f4ad-40e6-9384-63d8c17e4ef6",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_162348_0971519c-f4ad-40e6-9384-63d8c17e4ef6.png",
+          "local_path": "edit/generated/stills/tourist_lock_B.png"
+        }
+      ],
+      "selected_job_id": "228e3063-d82c-4841-8748-60f07051def1"
+    },
+    "referee_lock": {
+      "prompt_file": "edit/prompts/02_referee_lock.md",
+      "model": "gpt_image_2",
+      "aspect_ratio": "16:9",
+      "resolution": "2k",
+      "quality": "high",
+      "reference_media": [
+        "7ec31a15-3893-43eb-9d9c-bb2be67941ce",
+        "aa977e6e-b34b-4a64-8d72-265297cf4062"
+      ],
+      "variants": [
+        {
+          "id": "7bec395b-d863-4e19-9752-23a877ccb839",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_162353_7bec395b-d863-4e19-9752-23a877ccb839.png",
+          "local_path": "edit/generated/stills/referee_lock_A.png"
+        },
+        {
+          "id": "df4374bd-f50a-4e3a-8f7b-05249e348ab7",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_162353_df4374bd-f50a-4e3a-8f7b-05249e348ab7.png",
+          "local_path": "edit/generated/stills/referee_lock_B.png"
+        }
+      ],
+      "selected_job_id": "7bec395b-d863-4e19-9752-23a877ccb839"
+    },
+    "shot_anchors": {
+      "prompt_file": "edit/prompts/03_shot_anchors.md",
+      "model": "gpt_image_2",
+      "aspect_ratio": "9:16",
+      "resolution": "2k",
+      "quality": "high",
+      "cost_credits": 49,
+      "shots": {
+        "01_fail": {
+          "id": "cfefbdc0-c2b9-4872-9fd5-6e4651132d1f",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163148_cfefbdc0-c2b9-4872-9fd5-6e4651132d1f.png",
+          "local_path": "edit/generated/stills/shot_01_fail.png",
+          "qa": "pass"
+        },
+        "02_reaction": {
+          "id": "d57fa38f-b0f5-4fa4-80fe-2af0113ed02c",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163622_d57fa38f-b0f5-4fa4-80fe-2af0113ed02c.png",
+          "local_path": "edit/generated/stills/shot_02_reaction.png",
+          "qa": "pass",
+          "rejected_job_id": "76047b39-88de-45a5-87da-939f36b805a0",
+          "rejection_reason": "Gate showed a green success indicator during the failed-tap reaction."
+        },
+        "03_whistle": {
+          "id": "1f6e947b-f264-41ba-9bad-1a7afd2364b3",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163154_1f6e947b-f264-41ba-9bad-1a7afd2364b3.png",
+          "local_path": "edit/generated/stills/shot_03_whistle.png",
+          "qa": "pass"
+        },
+        "04_walk": {
+          "id": "578256f7-7a63-4a99-92a0-7f2788d15195",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163157_578256f7-7a63-4a99-92a0-7f2788d15195.png",
+          "local_path": "edit/generated/stills/shot_04_walk.png",
+          "qa": "pass"
+        },
+        "05_reveal": {
+          "id": "f6f99816-f88c-4c74-bf52-81cea24313d1",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163200_f6f99816-f88c-4c74-bf52-81cea24313d1.png",
+          "local_path": "edit/generated/stills/shot_05_reveal.png",
+          "qa": "pass"
+        },
+        "06_success": {
+          "id": "7ddfe298-8af9-468d-a623-be0f225c6572",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163204_7ddfe298-8af9-468d-a623-be0f225c6572.png",
+          "local_path": "edit/generated/stills/shot_06_success.png",
+          "qa": "pass"
+        },
+        "07_relief": {
+          "id": "269ad1e5-bb07-4015-96b5-285c3a5c5da7",
+          "status": "completed",
+          "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_163206_269ad1e5-bb07-4015-96b5-285c3a5c5da7.png",
+          "local_path": "edit/generated/stills/shot_07_relief.png",
+          "qa": "pass"
+        }
+      }
+    }
+  },
+  "mini_video_jobs": {
+    "prompt_file": "edit/prompts/04_motion_tests.md",
+    "model": "kling3_0",
+    "mode": "pro",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "sound": "off",
+    "cost_credits": 21,
+    "tests": {
+      "whistle": {
+        "id": "898e75f8-1005-4caf-a204-b7f1a1f4cce3",
+        "status": "completed",
+        "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_164350_898e75f8-1005-4caf-a204-b7f1a1f4cce3.mp4",
+        "local_path": "edit/generated/videos/tests/test_whistle.mp4",
+        "qa": "pass_and_reuse"
+      },
+      "walk_reveal": {
+        "id": "a2b3c817-1698-479e-aa9e-acdda8549243",
+        "status": "completed",
+        "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_164353_a2b3c817-1698-479e-aa9e-acdda8549243.mp4",
+        "local_path": "edit/generated/videos/tests/test_walk_reveal.mp4",
+        "qa": "pass_and_reuse"
+      },
+      "success_tap": {
+        "id": "00e48d9d-926e-4501-bc3e-542fe2031134",
+        "status": "completed",
+        "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_164355_00e48d9d-926e-4501-bc3e-542fe2031134.mp4",
+        "local_path": "edit/generated/videos/tests/test_success_tap.mp4",
+        "qa": "pass_and_reuse"
+      }
+    }
+  },
+  "final_video_jobs": {
+    "prompt_file": "edit/prompts/05_final_motion.md",
+    "model": "kling3_0",
+    "mode": "pro",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "sound": "off",
+    "cost_credits": 21,
+    "shots": {
+      "01_fail": {
+        "id": "82b1b3be-c3ff-42bc-aee5-f0ea9b145190",
+        "status": "completed",
+        "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_165047_82b1b3be-c3ff-42bc-aee5-f0ea9b145190.mp4",
+        "local_path": "edit/generated/videos/final/shot_01_fail.mp4",
+        "qa": "conditional_pass_reverse_first_0.55s"
+      },
+      "02_reaction": {
+        "id": "0878e4df-bba6-479f-9ae6-9610bcc6103e",
+        "status": "completed",
+        "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_165044_0878e4df-bba6-479f-9ae6-9610bcc6103e.mp4",
+        "local_path": "edit/generated/videos/final/shot_02_reaction.mp4",
+        "qa": "pass"
+      },
+      "07_relief": {
+        "id": "8bd52d44-5c7c-4eed-a471-fee60457fc24",
+        "status": "completed",
+        "raw_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GdCvhxlgQEZqC4MP8iBdXwraci/hf_20260717_165152_8bd52d44-5c7c-4eed-a471-fee60457fc24.mp4",
+        "local_path": "edit/generated/videos/final/shot_07_relief.mp4",
+        "qa": "pass_trim_first_1.2s"
+      }
+    },
+    "reused_motion_tests": ["whistle", "walk_reveal", "success_tap"]
+  },
+  "downloads": {
+    "final_preview": "edit/preview/TOSS_JP_reel_v01.mp4",
+    "picture_lock": "edit/preview/toss_jp_reel_picture_lock.mp4",
+    "text_lock": "edit/preview/toss_jp_reel_text_lock.mp4",
+    "final_audio_mix": "edit/preview/toss_jp_reel_mix.wav",
+    "final_sha256": "F2D5DF4DC046AFB200BE98E5D32EAF575F0DF036C2A6F1ECAC97E0867AEB005A",
+    "remaining_higgsfield_credits": 1036
+  }
+}

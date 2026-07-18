@@ -7,19 +7,28 @@
 - GPT Image 기반 9:16 스토리보드: **13컷 완성**
 - 최종 스토리보드 규격: **1080×1920 RGB PNG**
 - 콘택트시트: **1488×2688 PNG**
-- S13 엔딩컷 수정 완료: 심판은 개찰구 화면 오른쪽에 서고 **오른손으로 TOSS 카드를 태그**, 시계가 찬 왼팔은 아래로 유지
+- 일본인 관광객을 새 기준 인물 `tourist_lock_JP_v2.jpg`로 전 컷 교체
+- S06·S08 수정 완료: 개찰구 정면 기준 오른쪽의 별도 한국 지하철 복도(A04)에서 관광객 오버더숄더로 심판이 접근
+- S12·S13 수정 완료: 심판은 개찰구 화면 오른쪽에 서고 **오른손으로 TOSS 카드를 태그**, 시계가 찬 왼팔은 아래로 유지
 - 이전 영상 제작본·오디오·소스 스틸·검수 자료도 `edit/` 아래에 함께 보관
 
 ## 바로 보기
 
 - [13컷 콘택트시트](edit/storyboard_gpt2/review/contact-sheet.png)
 - [최종 프레임 S01–S13](edit/storyboard_gpt2/frames/final/)
+- [수정된 S06 오버더숄더](edit/storyboard_gpt2/frames/final/S06.png)
+- [수정된 S08 접근컷](edit/storyboard_gpt2/frames/final/S08.png)
+- [수정된 S12 오른손 태그](edit/storyboard_gpt2/frames/final/S12.png)
 - [수정된 S13 엔딩컷](edit/storyboard_gpt2/frames/final/S13.png)
+- [오른쪽 복도 기준 배경 A04](edit/storyboard_gpt2/anchors/A04_right_concourse_master.png)
+- [새 관광객 기준 인물](edit/generated/stills/tourist_lock_JP_v2.jpg)
 - [스토리보드 연속성 바이블](edit/storyboard_gpt2/continuity-bible.md)
 - [이미지 생성 프롬프트 팩](edit/storyboard_gpt2/prompts/prompt-pack.md)
 - [영상 생성 프롬프트 명세](edit/storyboard_gpt2/review/video-prompt-spec.md)
 - [QA 리포트](edit/storyboard_gpt2/review/qa-report.md)
 - [스토리보드 매니페스트](edit/storyboard_gpt2/storyboard-manifest.json)
+- [이번 수정 연출 설계](docs/superpowers/specs/2026-07-18-toss-storyboard-right-axis-japanese-cast-design.md)
+- [이번 수정 실행 계획](docs/superpowers/plans/2026-07-18-toss-right-axis-japanese-cast.md)
 - [기존 릴 v01](edit/preview/TOSS_JP_reel_v01.mp4)
 - [기존 릴 QA](edit/preview/QA_REPORT.md)
 
@@ -27,7 +36,7 @@
 
 ```text
 edit/storyboard_gpt2/
-├─ anchors/          # 공간·인물 고정 앵커 3장
+├─ anchors/          # 공간·인물 고정 앵커 4장
 ├─ source_sketches/  # 손그림 스토리보드 S01–S13
 ├─ frames/raw/       # GPT Image 원본 프레임
 ├─ frames/final/     # 1080×1920 납품 프레임
@@ -51,4 +60,4 @@ edit/
 python -m pytest edit/storyboard_gpt2/tests/test_prepare_storyboard.py -q
 ```
 
-현재 체크포인트는 13개 최종 PNG, 콘택트시트, 매니페스트 및 S13 오른손 방향 수정까지 PASS입니다.
+현재 체크포인트는 새 일본인 관광객 캐스팅, A04 오른쪽 복도 축, 13개 최종 PNG, 콘택트시트, 매니페스트 및 S12·S13 오른손 방향 수정까지 PASS입니다.

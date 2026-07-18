@@ -1,6 +1,6 @@
 [CmdletBinding(SupportsShouldProcess)]
 param(
-    [string]$BaseCommit = "07df225",
+    [string]$BaseCommit = "07df225cd2beff67a9ba3c609900a79ba7d47a0e",
     [string]$CalibrationDir,
     [switch]$CalibrationOnly
 )
@@ -23,11 +23,12 @@ $shots = @(
     [pscustomobject]@{
         Id = "S02"
         RelativePath = "edit/storyboard_gpt2/frames/raw/S02.png"
+        BaseSha256 = "9A13C153311B62C613C7742C268BE93EEA12E3DDEF64EA4F970416AAF2D2A62C"
         Mode = "Neutral"
         Points = @(
-            [System.Drawing.PointF]::new(449.0, 877.0),
-            [System.Drawing.PointF]::new(481.0, 882.0),
-            [System.Drawing.PointF]::new(447.0, 894.0)
+            [System.Drawing.PointF]::new(448.0, 875.0),
+            [System.Drawing.PointF]::new(489.0, 879.0),
+            [System.Drawing.PointF]::new(446.0, 895.0)
         )
         Occlusion = ,([System.Drawing.PointF[]]@(
                 [System.Drawing.PointF]::new(441.0, 883.0),
@@ -41,36 +42,38 @@ $shots = @(
     [pscustomobject]@{
         Id = "S12"
         RelativePath = "edit/storyboard_gpt2/frames/raw/S12.png"
+        BaseSha256 = "194DCC0408D725D0C87A3237B31A8581D975029921908E38969F0EC4F2606E4B"
         Mode = "Official"
         Points = @(
-            [System.Drawing.PointF]::new(223.0, 771.0),
-            [System.Drawing.PointF]::new(287.0, 781.0),
-            [System.Drawing.PointF]::new(239.0, 850.0)
+            [System.Drawing.PointF]::new(220.0, 767.0),
+            [System.Drawing.PointF]::new(304.0, 781.0),
+            [System.Drawing.PointF]::new(237.0, 862.0)
         )
         Occlusion = ,([System.Drawing.PointF[]]@(
-                [System.Drawing.PointF]::new(270.0, 760.0),
-                [System.Drawing.PointF]::new(292.0, 769.0),
-                [System.Drawing.PointF]::new(294.0, 789.0),
-                [System.Drawing.PointF]::new(279.0, 789.0),
-                [System.Drawing.PointF]::new(268.0, 778.0)
+                [System.Drawing.PointF]::new(265.0, 748.0),
+                [System.Drawing.PointF]::new(313.0, 752.0),
+                [System.Drawing.PointF]::new(315.0, 794.0),
+                [System.Drawing.PointF]::new(279.0, 796.0),
+                [System.Drawing.PointF]::new(264.0, 779.0)
             ))
         Crop = [System.Drawing.Rectangle]::new(160, 700, 220, 240)
     },
     [pscustomobject]@{
         Id = "S13"
         RelativePath = "edit/storyboard_gpt2/frames/raw/S13.png"
+        BaseSha256 = "11B359F68E97E5E97DBFC4CACF023D5C8DE4632229B4080158AC54174D78B770"
         Mode = "Official"
         Points = @(
-            [System.Drawing.PointF]::new(578.0, 901.0),
-            [System.Drawing.PointF]::new(608.0, 903.0),
-            [System.Drawing.PointF]::new(580.0, 943.0)
+            [System.Drawing.PointF]::new(575.0, 899.0),
+            [System.Drawing.PointF]::new(615.0, 903.0),
+            [System.Drawing.PointF]::new(578.0, 947.0)
         )
         Occlusion = ,([System.Drawing.PointF[]]@(
-                [System.Drawing.PointF]::new(599.0, 889.0),
-                [System.Drawing.PointF]::new(614.0, 895.0),
-                [System.Drawing.PointF]::new(612.0, 913.0),
-                [System.Drawing.PointF]::new(601.0, 916.0),
-                [System.Drawing.PointF]::new(596.0, 903.0)
+                [System.Drawing.PointF]::new(594.0, 886.0),
+                [System.Drawing.PointF]::new(619.0, 891.0),
+                [System.Drawing.PointF]::new(619.0, 917.0),
+                [System.Drawing.PointF]::new(600.0, 919.0),
+                [System.Drawing.PointF]::new(593.0, 903.0)
             ))
         Crop = [System.Drawing.Rectangle]::new(520, 840, 150, 170)
     }
@@ -156,6 +159,48 @@ function Save-CalibrationCrop {
     }
 }
 
+function Test-SkinPixel {
+    param([Parameter(Mandatory)][System.Drawing.Color]$Color)
+
+    $r = [int]$Color.R
+    $g = [int]$Color.G
+    $b = [int]$Color.B
+    return ($r -ge 105 -and $g -ge 55 -and $b -ge 35 -and
+        $r -ge ($g + 9) -and $r -ge ($b + 16) -and
+        ([Math]::Max($r, [Math]::Max($g, $b)) - [Math]::Min($r, [Math]::Min($g, $b))) -ge 18)
+}
+
+function Restore-SkinOcclusion {
+    param(
+        [Parameter(Mandatory)][System.Drawing.Bitmap]$Base,
+        [Parameter(Mandatory)][System.Drawing.Bitmap]$Output,
+        [Parameter(Mandatory)][System.Drawing.PointF[]]$Polygon
+    )
+
+    $path = [System.Drawing.Drawing2D.GraphicsPath]::new()
+    try {
+        $path.AddPolygon($Polygon)
+        $bounds = $path.GetBounds()
+        $minX = [Math]::Max(0, [int][Math]::Floor($bounds.Left))
+        $maxX = [Math]::Min($Base.Width - 1, [int][Math]::Ceiling($bounds.Right))
+        $minY = [Math]::Max(0, [int][Math]::Floor($bounds.Top))
+        $maxY = [Math]::Min($Base.Height - 1, [int][Math]::Ceiling($bounds.Bottom))
+
+        for ($y = $minY; $y -le $maxY; $y++) {
+            for ($x = $minX; $x -le $maxX; $x++) {
+                if (-not $path.IsVisible($x + 0.5, $y + 0.5)) { continue }
+                $basePixel = $Base.GetPixel($x, $y)
+                if (Test-SkinPixel -Color $basePixel) {
+                    $Output.SetPixel($x, $y, $basePixel)
+                }
+            }
+        }
+    }
+    finally {
+        $path.Dispose()
+    }
+}
+
 if (-not (Test-Path -LiteralPath $assetPath)) {
     throw "Official card asset not found: $assetPath"
 }
@@ -176,6 +221,10 @@ try {
         $tempBase = [System.IO.Path]::GetTempFileName()
         try {
             Export-GitBlob -Revision $BaseCommit -RelativePath $shot.RelativePath -Destination $tempBase
+            $actualBaseSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $tempBase).Hash
+            if ($actualBaseSha256 -ne $shot.BaseSha256) {
+                throw "Base blob SHA-256 mismatch for $($shot.Id). Expected $($shot.BaseSha256); got $actualBaseSha256."
+            }
             $base = [System.Drawing.Bitmap]::FromFile($tempBase)
             try {
                 if ($CalibrationDir) {
@@ -196,21 +245,13 @@ try {
                     $texture = if ($shot.Mode -eq "Official") { $official } else { $neutral }
                     $graphics.DrawImage($texture, [System.Drawing.PointF[]]$shot.Points)
 
-                    foreach ($polygon in $shot.Occlusion) {
-                        $path = [System.Drawing.Drawing2D.GraphicsPath]::new()
-                        try {
-                            $path.AddPolygon([System.Drawing.PointF[]]$polygon)
-                            $graphics.SetClip($path)
-                            $graphics.DrawImageUnscaled($base, 0, 0)
-                            $graphics.ResetClip()
-                        }
-                        finally {
-                            $path.Dispose()
-                        }
-                    }
                 }
                 finally {
                     $graphics.Dispose()
+                }
+
+                foreach ($polygon in $shot.Occlusion) {
+                    Restore-SkinOcclusion -Base $base -Output $output -Polygon ([System.Drawing.PointF[]]$polygon)
                 }
 
                 $destination = Join-Path $repoRoot $shot.RelativePath

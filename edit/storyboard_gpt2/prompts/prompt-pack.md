@@ -23,15 +23,15 @@ Create the empty spatial master with exactly six separate gate cabinets forming 
 
 ## A02 — tourist blocking master
 
-Inputs: S02 sketch = composition reference; tourist sheet = exact identity/wardrobe reference; A01 = exact environment/geography reference.
+Inputs: S02 sketch = composition reference; `tourist_lock_JP_v2.jpg` = exact Photo 1 identity; A01 = exact environment/geography reference.
 
 ```text
-Preserve A01's Korean station, exact `타는 곳  Tracks  ①  →` sign, camera height, six cabinets/five lanes and G3/G4 geography. Add exactly one locked Japanese woman entering from offscreen-left and stopping at the G3 entrance. She remains before the closed dark glass flap. Her right arm reaches toward the screen-right G3 reader; her silver suitcase trails behind-left and remains outside the gate. Full body plus gate context, calm travel posture, beige crossbody bag visible. Do not move the reader, alter the sign, open the flap, place her beyond the flap, add a referee, reveal a TOSS card or add foreground travelers.
+Preserve A01's Korean station, exact `타는 곳  Tracks  ①  →` sign, camera height, six cabinets/five lanes and G3/G4 geography. Add exactly the Photo 1 Japanese woman with straight dark-brown shoulder-length hair and light full bangs, entering from offscreen-left and stopping at the G3 entrance. She remains before the closed dark glass flap. Her right arm reaches toward the screen-right G3 reader; her silver suitcase trails behind-left and remains outside the gate. Full body plus gate context, white blouse, light-blue jeans, beige flats and beige crossbody bag visible. Do not move the reader, alter the sign, open the flap, place her beyond the flap, add a referee, reveal a TOSS card or add foreground travelers.
 ```
 
 ## A03 — referee blocking master
 
-Inputs: S06 sketch = composition reference; referee sheet = exact identity/wardrobe reference; tourist sheet = exact identity/wardrobe reference; A01 and A02 = environment/blocking references.
+Inputs: S06 sketch = timing reference; referee sheet = exact identity/wardrobe reference; `tourist_lock_JP_v2.jpg` = exact Photo 1 identity; A01 and A02 = environment/blocking references.
 
 ```text
 Preserve the exact Korean station, overhead `타는 곳  Tracks  ①  →` sign and tourist placement from A01/A02. The tourist stays at G3 before the closed flap. Add exactly one locked Korean soccer referee standing unexpectedly in G4 on screen-right, full body visible, squared shoulders, arms relaxed, stern deadpan face, black whistle and black watch present. He must not stand inside G3 or on screen-left. The comedy comes only from his absurdly formal presence in a real Korean subway. No stadium, crowd, card, smile or dramatic rays.
@@ -43,15 +43,15 @@ Inputs: S01 sketch = composition; A01 = environment reference. Use A01 framing a
 
 ## S02
 
-Inputs: S02 sketch = composition; A01/A02 = environment and blocking; tourist sheet = identity. Same locked camera as S01. Capture the tourist mid-entry from screen-left, suitcase rolling behind-left, right hand beginning to reach for G3 reader, feet still before the flap.
+Inputs: S02 sketch = composition; A01/A02 = environment and blocking; `tourist_lock_JP_v2.jpg` = identity. Same locked camera as S01. Capture the Photo 1 tourist with straight shoulder-length hair and full bangs mid-entry from screen-left, suitcase rolling behind-left, right hand beginning to reach for G3 reader, feet still before the flap.
 
 ## S03
 
-Inputs: S03 sketch = composition; A02 = blocking; tourist sheet = identity. 45-degree high angle over the tourist's right shoulder. Show her correct right hand presenting one generic matte-gray unbranded transit card flat over the G3 reader, a small red failure light, closed flaps ahead and suitcase behind-left. No TOSS colors or logo. Anatomically correct hand, reader and card contact.
+Inputs: S03 sketch = composition; A02 = blocking; `tourist_lock_JP_v2.jpg` = identity and straight-hair silhouette. 45-degree high angle over the tourist's right shoulder. Show her correct right hand presenting one generic matte-gray unbranded transit card flat over the G3 reader, a small red failure light, closed flaps ahead and suitcase behind-left. No TOSS colors or logo. Anatomically correct hand, reader and card contact.
 
 ## S04
 
-Inputs: S04 sketch = composition; A02 = blocking; tourist sheet = identity. Tight natural close-up. She looks down and slightly screen-right toward her hand and reader, brows lifted and lips barely parted, restrained confusion. She does not look into camera or toward the referee yet. Soft 50mm depth, no text.
+Inputs: S04 sketch = composition; A02 = blocking; `tourist_lock_JP_v2.jpg` = exact face, full bangs and straight shoulder-length hair. Tight natural close-up. She looks down and slightly screen-right toward her hand and reader, brows lifted and lips barely parted, restrained confusion. She does not look into camera or toward the referee yet. Soft 50mm depth, no text.
 
 ## S05
 
@@ -63,7 +63,7 @@ Inputs: old S06 = story beat only; A04 = mandatory right-side corridor; `tourist
 
 ## S07
 
-Inputs: S07 sketch = composition; A02/A03 = direction; tourist sheet = identity. Tight reaction of the tourist turning only her eyes and chin toward screen-right at the referee, small realistic disbelief, no smile, no dialogue text. Eyeline must exit frame right.
+Inputs: S07 sketch = composition; A02/A03 = direction; `tourist_lock_JP_v2.jpg` = exact Photo 1 identity. Tight reaction of the straight-haired tourist turning only her eyes and chin toward screen-right at the referee, small realistic disbelief, no smile, no dialogue text. Eyeline must exit frame right.
 
 ## S08
 
@@ -71,11 +71,11 @@ Inputs: approved S06 + A04 = exact geography and approach axis; `tourist_lock_JP
 
 ## S09
 
-Inputs: S09 sketch = composition; A02/A03 = geography; both character sheets = identity. Preserve the tourist's medium profile frame at G3. The referee intrudes from screen-right toward screen-left in the near foreground, shoulder and torso crossing into frame, then stops close but respectful. Tourist looks at him. Only two people, no merged bodies, no cards.
+Inputs: S09 sketch = composition; A02/A03 = geography; `tourist_lock_JP_v2.jpg` and referee sheet = identities. Preserve the Photo 1 tourist's medium profile frame at G3 with straight shoulder-length hair and full bangs. The referee intrudes from screen-right toward screen-left in the near foreground, shoulder and torso crossing into frame, then stops close but respectful. Tourist looks at him. Only two people, no merged bodies, no cards.
 
 ## S10
 
-Inputs: S10 sketch = composition; S09/A03 = blocking; referee sheet = identity; exact TOSS PNG = product insert reference. Medium-tight chest shot. The referee looks down and pulls exactly one card from his striped shirt chest pocket like a soccer booking; only the top corner of the exact blue holographic TOSS card is visible. Restrained blue-gold Japanese game rays begin behind the pocket. Preserve live-action subway background, correct fingers, whistle and watch.
+Inputs: S10 sketch = composition; S09/A03 = blocking; `tourist_lock_JP_v2.jpg` = foreground hair silhouette; referee sheet = identity; exact TOSS PNG = product insert reference. Medium-tight chest shot. The referee looks down and pulls exactly one card from his striped shirt chest pocket like a soccer booking; only the top corner of the exact blue holographic TOSS card is visible. The tourist remains a blurred screen-left foreground fragment with straight shoulder-length hair. Restrained blue-gold Japanese game rays begin behind the pocket. Preserve live-action subway background, correct fingers, whistle and watch.
 
 ## S11
 
@@ -87,4 +87,4 @@ Inputs: old S12 = reader design and success state only; corrected S13 = screen r
 
 ## S13
 
-Inputs: S13 sketch = composition; A01/A02/A03/S12 = environment and continuity; both character sheets = identity; exact TOSS PNG = product reference. Elegant side-profile vertical wide shot. The G3 glass flaps are now open. Tourist and silver suitcase cross together toward the paid side while she glances back with relieved gratitude. Referee is physically on SCREEN-RIGHT of the reader, facing screen-left, and taps the exact card with his RIGHT HAND; his watch-bearing LEFT ARM hangs straight down. The overhead Korean subway sign reads `타는 곳 / Tracks / ① →`. Leave the upper-left third quiet and uncluttered for later copy. Calm premium end-frame light, no generated overlay text, no mirrored anatomy or hand swap.
+Inputs: S13 sketch = composition; A01/A02/A03/S12 = environment and continuity; `tourist_lock_JP_v2.jpg` and referee sheet = identities; exact TOSS PNG = product reference. Elegant side-profile vertical wide shot. The G3 glass flaps are now open. The Photo 1 tourist with straight shoulder-length hair and her silver suitcase cross together toward the paid side while she glances back with relieved gratitude. Referee is physically on SCREEN-RIGHT of the reader, facing screen-left, and taps the exact card with his RIGHT HAND; his watch-bearing LEFT ARM hangs straight down. The overhead Korean subway sign reads `타는 곳 / Tracks / ① →`. Leave the upper-left third quiet and uncluttered for later copy. Calm premium end-frame light, no generated overlay text, no mirrored anatomy or hand swap.

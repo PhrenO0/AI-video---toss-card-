@@ -32,7 +32,9 @@ def test_prepare_all_keeps_legacy_sheet_without_auxiliary(tmp_path: Path) -> Non
     outputs = sorted(final.glob("S*.png"))
     assert len(outputs) == 13
     assert all(Image.open(path).size == (1080, 1920) for path in outputs)
+    assert all(Image.open(path).mode == "RGB" for path in outputs)
     assert Image.open(sheet).size == (1488, 2688)
+    assert Image.open(sheet).mode == "RGB"
 
 
 def test_prepare_all_normalizes_four_auxiliary_frames_and_extends_sheet(
@@ -56,7 +58,12 @@ def test_prepare_all_normalizes_four_auxiliary_frames_and_extends_sheet(
         Image.open(path).size == (1080, 1920)
         for path in auxiliary_final.glob("*.png")
     )
+    assert all(
+        Image.open(path).mode == "RGB"
+        for path in auxiliary_final.glob("*.png")
+    )
     assert Image.open(sheet).size == (1488, 3354)
+    assert Image.open(sheet).mode == "RGB"
 
 
 def test_prepare_all_rejects_one_sided_auxiliary_configuration(

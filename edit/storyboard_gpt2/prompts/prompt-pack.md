@@ -83,7 +83,7 @@ Inputs: S11 sketch = composition; S10/A03 = continuity; referee sheet = identity
 
 ## S12
 
-Inputs: S12 sketch = composition; A02/S11 = geography and action continuity; referee sheet = identity; exact TOSS PNG = product reference. Macro three-quarter close-up of the referee's correct hand lowering the exact vertical TOSS card flat to the same screen-right G3 contactless reader. Reader shows a clean green success glow, not text. Tourist hand is not performing the tap. Accurate fingers, single card, parallel contact, realistic metal reflection.
+Inputs: old S12 = reader design and success state only; corrected S13 = screen relationship; referee sheet = identity; exact TOSS PNG = product reference. Three-quarter medium close-up wide enough to prove hand ownership: reader on screen-left and referee torso on screen-right. His watch-free RIGHT shoulder and arm extend toward screen-left; his RIGHT hand taps one exact TOSS card flat on the green reader. His LEFT arm hangs beside his torso with the black watch clearly visible on the lowered LEFT wrist. Preserve natural five-finger grip, single card and realistic metal reflections. No watch on card hand, left-hand tag, mirrored anatomy, cropped shoulders, tourist hand or failure X.
 
 ## S13
 

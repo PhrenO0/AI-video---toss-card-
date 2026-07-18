@@ -59,7 +59,7 @@ Inputs: S05 sketch = emphasis; referee sheet = identity; A03 = Korean setting. T
 
 ## S06
 
-Inputs: S06 sketch = composition; A01/A02/A03 = geography and blocking; both character sheets = identity. Wide reveal of the same G3/G4 gates: tourist frozen at G3 on the left half, referee standing formally in G4 on screen-right. Keep ample negative space between them, closed G3 flap and suitcase behind tourist visible.
+Inputs: old S06 = story beat only; A04 = mandatory right-side corridor; `tourist_lock_JP_v2.jpg` and referee sheet = identity. True over-the-shoulder view from behind and slightly left of the tourist: her straight-haired rear head and left shoulder fill the soft-focus screen-left foreground while the referee, 6–8m away and slightly screen-right, looks at her, finishes the whistle beat and takes his first deliberate step toward her. Same A04 wall map, blue signs, tiled columns, ceiling-light rhythm and floor axis. No gates, gate readers, large `타는 곳` sign, TOSS card or extra people.
 
 ## S07
 
@@ -67,7 +67,7 @@ Inputs: S07 sketch = composition; A02/A03 = direction; tourist sheet = identity.
 
 ## S08
 
-Inputs: S08 sketch = composition; A03 = environment and start position; referee sheet = identity. Low camera in G4 as the referee strides directly toward lens with stern deadpan expression, one foot forward, arms naturally counter-swinging, whistle and watch visible, gate rows receding behind him. 50mm compression, no stadium or effects.
+Inputs: approved S06 + A04 = exact geography and approach axis; `tourist_lock_JP_v2.jpg` and referee sheet = identity. Continue one beat later from the same over-the-shoulder direction with the camera 10–15% closer and slightly lower. Referee advances in a large natural mid-stride toward the tourist, full body and shoes visible, stern deadpan face, whistle lowered and black watch on left wrist. Keep a blurred sliver of the tourist's straight rear hair and left shoulder at the screen-left edge to prove the target. No gates, gate readers, large `타는 곳` sign, TOSS card, runway symmetry or effects.
 
 ## S09
 

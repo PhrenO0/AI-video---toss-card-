@@ -5,26 +5,28 @@
   "locked_assets": {
     "tourist": "edit/generated/stills/tourist_lock_JP_v2.jpg",
     "referee": "edit/generated/stills/referee_lock_A.png",
-    "card": "260702_토스_선불카드_애셋_모음집/pre-card-hologram-front (1).png"
+    "card": "260702_토스_선불카드_애셋_모음집/pre-card-hologram-front (1).png",
+    "gate_hall_structure_reference": "edit/storyboard_gpt2/references/structural/gate-hall-reference.jpg",
+    "right_concourse_structure_reference": "edit/storyboard_gpt2/references/structural/right-concourse-reference.jpg"
   },
   "space_anchors": {
-    "gate_front": "edit/storyboard_gpt2/anchors/A01_gate_master.png",
-    "right_concourse": "edit/storyboard_gpt2/anchors/A04_right_concourse_master.png"
+    "gate_front": "edit/storyboard_gpt2/anchors/A05_gate_hall_structural_master.png",
+    "right_concourse": "edit/storyboard_gpt2/anchors/A06_right_concourse_structural_master.png"
   },
   "overall_status": "pass",
   "shots": [
-    {"id":"S01","start":0.0,"end":0.8,"sketch":"edit/storyboard_gpt2/source_sketches/S01.png","raw":"edit/storyboard_gpt2/frames/raw/S01.png","final":"edit/storyboard_gpt2/frames/final/S01.png","qa":"pass","card_visibility":"none"},
-    {"id":"S02","start":0.8,"end":2.4,"sketch":"edit/storyboard_gpt2/source_sketches/S02.png","raw":"edit/storyboard_gpt2/frames/raw/S02.png","final":"edit/storyboard_gpt2/frames/final/S02.png","qa":"pass","card_visibility":"none"},
-    {"id":"S03","start":2.4,"end":3.4,"sketch":"edit/storyboard_gpt2/source_sketches/S03.png","raw":"edit/storyboard_gpt2/frames/raw/S03.png","final":"edit/storyboard_gpt2/frames/final/S03.png","qa":"pass","card_visibility":"none"},
-    {"id":"S04","start":3.4,"end":4.3,"sketch":"edit/storyboard_gpt2/source_sketches/S04.png","raw":"edit/storyboard_gpt2/frames/raw/S04.png","final":"edit/storyboard_gpt2/frames/final/S04.png","qa":"pass","card_visibility":"none"},
-    {"id":"S05","start":4.3,"end":4.8,"sketch":"edit/storyboard_gpt2/source_sketches/S05.png","raw":"edit/storyboard_gpt2/frames/raw/S05.png","final":"edit/storyboard_gpt2/frames/final/S05.png","qa":"pass","card_visibility":"none"},
-    {"id":"S06","start":4.8,"end":5.8,"sketch":"edit/storyboard_gpt2/source_sketches/S06.png","raw":"edit/storyboard_gpt2/frames/raw/S06.png","final":"edit/storyboard_gpt2/frames/final/S06.png","qa":"pass","card_visibility":"none","space":"right_concourse_A04","framing":"tourist_ots"},
-    {"id":"S07","start":5.8,"end":6.6,"sketch":"edit/storyboard_gpt2/source_sketches/S07.png","raw":"edit/storyboard_gpt2/frames/raw/S07.png","final":"edit/storyboard_gpt2/frames/final/S07.png","qa":"pass","card_visibility":"none"},
-    {"id":"S08","start":6.6,"end":8.2,"sketch":"edit/storyboard_gpt2/source_sketches/S08.png","raw":"edit/storyboard_gpt2/frames/raw/S08.png","final":"edit/storyboard_gpt2/frames/final/S08.png","qa":"pass","card_visibility":"none","space":"right_concourse_A04","framing":"tourist_ots"},
-    {"id":"S09","start":8.2,"end":9.4,"sketch":"edit/storyboard_gpt2/source_sketches/S09.png","raw":"edit/storyboard_gpt2/frames/raw/S09.png","final":"edit/storyboard_gpt2/frames/final/S09.png","qa":"pass","card_visibility":"none"},
-    {"id":"S10","start":9.4,"end":10.6,"sketch":"edit/storyboard_gpt2/source_sketches/S10.png","raw":"edit/storyboard_gpt2/frames/raw/S10.png","final":"edit/storyboard_gpt2/frames/final/S10.png","qa":"pass","card_visibility":"partial_exact"},
-    {"id":"S11","start":10.6,"end":11.7,"sketch":"edit/storyboard_gpt2/source_sketches/S11.png","raw":"edit/storyboard_gpt2/frames/raw/S11.png","final":"edit/storyboard_gpt2/frames/final/S11.png","qa":"pass","card_visibility":"full_exact"},
-    {"id":"S12","start":11.7,"end":13.2,"sketch":"edit/storyboard_gpt2/source_sketches/S12.png","raw":"edit/storyboard_gpt2/frames/raw/S12.png","final":"edit/storyboard_gpt2/frames/final/S12.png","qa":"pass","card_visibility":"full_exact","tag_hand":"right","watch_wrist":"left"},
-    {"id":"S13","start":13.2,"end":18.0,"sketch":"edit/storyboard_gpt2/source_sketches/S13.png","raw":"edit/storyboard_gpt2/frames/raw/S13.png","final":"edit/storyboard_gpt2/frames/final/S13.png","qa":"pass","card_visibility":"full_exact","tag_hand":"right","watch_wrist":"left"}
+    {"id":"S01","start":0.0,"end":0.8,"sketch":"edit/storyboard_gpt2/source_sketches/S01.png","raw":"edit/storyboard_gpt2/frames/raw/S01.png","final":"edit/storyboard_gpt2/frames/final/S01.png","qa":"pass","card_visibility":"none","space":"gate_hall_A05"},
+    {"id":"S02","start":0.8,"end":2.4,"sketch":"edit/storyboard_gpt2/source_sketches/S02.png","raw":"edit/storyboard_gpt2/frames/raw/S02.png","final":"edit/storyboard_gpt2/frames/final/S02.png","qa":"pass","card_visibility":"none","space":"gate_hall_A05","framing":"strict_rear","action":"last_half_step"},
+    {"id":"S03","start":2.4,"end":3.4,"sketch":"edit/storyboard_gpt2/source_sketches/S03.png","raw":"edit/storyboard_gpt2/frames/raw/S03.png","final":"edit/storyboard_gpt2/frames/final/S03.png","qa":"pass","card_visibility":"none","space":"gate_hall_A05","failure_attempt":1,"framing":"high_angle"},
+    {"id":"S04","start":3.4,"end":4.3,"sketch":"edit/storyboard_gpt2/source_sketches/S04.png","raw":"edit/storyboard_gpt2/frames/raw/S04.png","final":"edit/storyboard_gpt2/frames/final/S04.png","qa":"pass","card_visibility":"none","space":"gate_hall_A05","failure_attempt":2,"framing":"reader_level_bottom_view","gaze":"card_reader_contact"},
+    {"id":"S05","start":4.3,"end":4.8,"sketch":"edit/storyboard_gpt2/source_sketches/S05.png","raw":"edit/storyboard_gpt2/frames/raw/S05.png","final":"edit/storyboard_gpt2/frames/final/S05.png","qa":"pass","card_visibility":"none","space":"gate_hall_A05"},
+    {"id":"S06","start":4.8,"end":5.8,"sketch":"edit/storyboard_gpt2/source_sketches/S06.png","raw":"edit/storyboard_gpt2/frames/raw/S06.png","final":"edit/storyboard_gpt2/frames/final/S06.png","qa":"pass","card_visibility":"none","space":"right_concourse_A06","framing":"tourist_ots"},
+    {"id":"S07","start":5.8,"end":6.6,"sketch":"edit/storyboard_gpt2/source_sketches/S07.png","raw":"edit/storyboard_gpt2/frames/raw/S07.png","final":"edit/storyboard_gpt2/frames/final/S07.png","qa":"pass","card_visibility":"none","space":"right_concourse_A06"},
+    {"id":"S08","start":6.6,"end":8.2,"sketch":"edit/storyboard_gpt2/source_sketches/S08.png","raw":"edit/storyboard_gpt2/frames/raw/S08.png","final":"edit/storyboard_gpt2/frames/final/S08.png","qa":"pass","card_visibility":"none","space":"right_concourse_A06","framing":"tourist_ots"},
+    {"id":"S09","start":8.2,"end":9.4,"sketch":"edit/storyboard_gpt2/source_sketches/S09.png","raw":"edit/storyboard_gpt2/frames/raw/S09.png","final":"edit/storyboard_gpt2/frames/final/S09.png","qa":"pass","card_visibility":"none","space":"gate_hall_A05"},
+    {"id":"S10","start":9.4,"end":10.6,"sketch":"edit/storyboard_gpt2/source_sketches/S10.png","raw":"edit/storyboard_gpt2/frames/raw/S10.png","final":"edit/storyboard_gpt2/frames/final/S10.png","qa":"pass","card_visibility":"partial_exact","space":"gate_hall_A05"},
+    {"id":"S11","start":10.6,"end":11.7,"sketch":"edit/storyboard_gpt2/source_sketches/S11.png","raw":"edit/storyboard_gpt2/frames/raw/S11.png","final":"edit/storyboard_gpt2/frames/final/S11.png","qa":"pass","card_visibility":"full_exact","space":"gate_hall_A05"},
+    {"id":"S12","start":11.7,"end":13.2,"sketch":"edit/storyboard_gpt2/source_sketches/S12.png","raw":"edit/storyboard_gpt2/frames/raw/S12.png","final":"edit/storyboard_gpt2/frames/final/S12.png","qa":"pass","card_visibility":"full_exact","space":"gate_hall_A05","tag_hand":"right","watch_wrist":"left"},
+    {"id":"S13","start":13.2,"end":18.0,"sketch":"edit/storyboard_gpt2/source_sketches/S13.png","raw":"edit/storyboard_gpt2/frames/raw/S13.png","final":"edit/storyboard_gpt2/frames/final/S13.png","qa":"pass","card_visibility":"full_exact","space":"gate_hall_A05","tag_hand":"right","watch_wrist":"left","tourist_motion":"walking_through_open_gate_with_rolling_suitcase"}
   ]
 }

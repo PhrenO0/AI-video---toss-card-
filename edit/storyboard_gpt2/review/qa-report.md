@@ -1,53 +1,49 @@
-# GPT Storyboard QA Report
+# GPT Image 스토리보드 QA 리포트
 
-## Anchor checkpoint
+## 최종 판정
 
-| Asset | Geometry | Identity | Hands | Text/signage | Decision | Notes |
-|---|---|---|---|---|---|---|
-| A01 | PASS | N/A | N/A | PASS | PASS | Six cabinets form five readable lanes; G3 centered; Korean overhead sign reads `타는 곳  Tracks  ①  →`; blue route boards and tiled columns establish Seoul subway. |
-| A02 | PASS | PASS | PASS | PASS | PASS | Tourist is recast from `tourist_lock_JP_v2.jpg`; she remains before the closed G3 flap, right hand at the screen-right reader, suitcase behind-left. |
-| A03 | PASS | PASS | PASS | PASS | PASS | Referee is fully visible in G4 on screen-right, separate from tourist at G3; stern face, whistle and watch preserved; no card shown. |
-| A04 | PASS | N/A | N/A | PASS | PASS | Separate right-facing concourse axis established with Korean blue wayfinding, tiled columns and fluorescent perspective; no fare gates or `타는 곳` sign intrude. |
+**PASS** — 구조적 사실감, 인물 일관성, 실패 반복의 구도 차이, 오른쪽 복도 축, 카드 공개 순서와 심판의 손 방향을 모두 확인했다.
 
-Anchor set approved for S01–S13 generation.
+## 공간 앵커
 
-## Story checkpoint S01–S09
+| 앵커 | 판정 | 검수 내용 |
+|---|---|---|
+| A05 개찰구 홀 | PASS | 한국 지하철형 금속 개찰구·원형 타일 기둥·천장 모듈·바닥 촉지도 조합이 자연스럽다. `타는 곳 / Tracks` 패널은 얇은 물리적 박스, 두 개의 행거 봉, 천장 체결부, 하부 그림자가 있어 공간에 실제로 매달려 보인다. |
+| A06 오른쪽 복도 | PASS | 개찰구 정면에서 오른쪽으로 고개를 돌렸을 때 이어질 수 있는 별도 축이다. 기둥 부착형 파란 안내판, 벽면 노선도, 설비문·소화전·환기구·촉지도가 있고 개찰구는 보이지 않는다. |
 
-| Shot | Geometry | Identity | Hands | Gaze/direction | Card secrecy | Text/signage | Decision | Notes |
-|---|---|---|---|---|---|---|---|---|
-| S01 | PASS | N/A | N/A | N/A | PASS | PASS | PASS | Approved Korean gate master promoted directly to establishing frame. |
-| S02 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Tourist remains before flap; suitcase trails behind-left; approved blocking master promoted directly. |
-| S03 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Correct right-hand failed tap, generic matte-gray card, red X, closed flap and suitcase relationship readable. |
-| S04 | PASS | PASS | N/A | PASS | PASS | PASS | PASS | Eyes remain down and screen-right at reader; restrained first reaction. |
-| S05 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Safety-safe tight sports portrait retains whistle-at-mouth reveal and Korean subway background. |
-| S06 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | A04 right-concourse reveal. Tourist is foreground left in true over-the-shoulder framing; referee approaches from distance while finishing the whistle; no fare gates visible. |
-| S07 | PASS | PASS | N/A | PASS | PASS | PASS | PASS | Tourist gaze exits frame right toward referee; stronger but realistic second reaction. |
-| S08 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Same A04 lens axis and OTS foreground as S06, now closer and lower. Referee advances mid-stride; no return to the frontal gate background. |
-| S09 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Tourist left, referee right in left-facing profile; gate-reader anchors the respectful two-shot. |
+실사 참고 사진은 구조와 설치 논리를 읽기 위한 참고로만 사용했으며 직접 합성하거나 배경을 복사하지 않았다.
 
-## Product checkpoint S10–S13
+## 컷별 검수
 
-| Shot | Geometry | Identity | Hands | Direction/action | Product | Text/signage | Decision | Notes |
-|---|---|---|---|---|---|---|---|---|
-| S10 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Exact product reference used; top portion emerges vertically from referee's chest pocket with restrained blue-gold activation rays. |
-| S11 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | One vertical card held overhead; chip, upper title and lower toss logo readable; referee remains deadpan. |
-| S12 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Referee stands screen-right. His watch-free RIGHT arm is traceable shoulder-to-card and tags once; the black watch remains on the lowered LEFT wrist. Exact card meets the reader over a green success ring. |
-| S13 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | Corrected final: referee stands screen-right of the open reader and tags with his RIGHT HAND; watch-bearing LEFT ARM hangs down. Tourist and suitcase remain screen-left on the paid side; `타는 곳 / Tracks / ① →` sign and upper copy-safe area are preserved. |
+| 컷 | 판정 | 핵심 확인 |
+|---|---|---|
+| S01 | PASS | A05의 빈 개찰구 홀을 먼저 보여 주어 장소와 진행 방향이 즉시 읽힌다. |
+| S02 | PASS | 관광객의 엄격한 뒷모습. 얼굴·뺨은 보이지 않고, 마지막 반 걸음과 뒤따라 구르는 캐리어로 인물이 자연스럽게 진입한다. |
+| S03 | PASS | 실패 1회차. 하이앵글에서 오른손의 무채색 일반 카드, 붉은 X, 닫힌 플랩과 캐리어 위치가 읽힌다. |
+| S04 | PASS | 실패 2회차이자 마지막 반복. 카드 리더 높이의 바텀뷰에서 카드·오른손이 전경을 차지하고, 관광객은 카메라가 아니라 카드 접촉점을 내려다보며 절제된 의아함을 보인다. |
+| S05 | PASS | 휘슬을 입에 문 심판의 근엄한 클로즈업으로 `삐빅`의 정체를 공개한다. TOSS 카드는 아직 없다. |
+| S06 | PASS | A06 오버더숄더. 관광객 앞쪽 먼 복도에서 심판이 휘슬을 마무리하며 첫걸음을 내딛는다. |
+| S07 | PASS | 제공된 일본인 관광객 얼굴·앞머리·헤어 길이가 유지되며, 시선은 화면 오른쪽의 심판을 향한다. |
+| S08 | PASS | S06과 동일한 A06 축에서 심판이 두 걸음 가까워졌다. 자연스러운 보행과 근엄한 표정이 유지된다. |
+| S09 | PASS | A05로 돌아온 게이트 옆 투샷. 관광객은 왼쪽, 심판은 오른쪽, 둘 사이에 리더가 있어 관계가 명확하다. |
+| S10 | PASS | 심판이 오른손으로 가슴주머니에서 정확한 TOSS 카드 상단 약 1/3만 꺼낸다. 왼손목의 검은 시계가 유지된다. |
+| S11 | PASS | 정확한 카드 한 장만 오른손으로 높이 들며 일본식 방사광은 카드 뒤에만 제한된다. |
+| S12 | PASS | 심판은 게이트 오른쪽에 서고 시계 없는 오른팔로 카드를 태그한다. 시계가 찬 왼팔은 아래에 있으며 리더는 녹색 성공 상태다. |
+| S13 | PASS | 관광객은 열린 게이트를 실제로 걸어 통과하며 캐리어가 같은 궤적으로 구른다. 심판의 오른손 태그·왼손목 시계·상단 카피 안전영역이 유지된다. |
 
-All 13 raw storyboard frames pass the content and continuity checkpoint.
+## 연속성 체크
 
-## Final delivery verification
+- PASS — 관광객은 `edit/generated/stills/tourist_lock_JP_v2.jpg`의 동일 인물이다.
+- PASS — 실패 태그는 S03, S04 두 번만 보이며 두 컷의 렌즈 높이와 정보량이 확실히 다르다.
+- PASS — 두 실패 모두 동일한 무채색 일반 카드이며 TOSS 제품 카드는 S10 전까지 노출되지 않는다.
+- PASS — S06·S08은 A06 오른쪽 복도 축을 공유하고 개찰구 배경으로 되돌아가지 않는다.
+- PASS — S09–S13은 A05 개찰구 홀의 패널 설치 방식과 공간 재질을 공유한다.
+- PASS — S12·S13에서 심판의 오른손이 카드 태그를 수행하고 검은 시계는 왼손목에 있다.
+- PASS — S13의 인물과 캐리어는 정지 포즈가 아니라 통과 동작 중이다.
 
-- PASS — 13 final PNG files exist at 1080×1920 RGB.
-- PASS — contact sheet exists at 1488×2688 and preserves S01–S13 order.
-- PASS — S01–S09 contain no TOSS product card.
-- PASS — S10 is the first partial product reveal; S11–S13 use the exact product reference.
-- PASS — failure frames retain closed flaps; successful reader and open-gate resolution occur only after S12.
-- PASS — Korean subway identity remains visible through the overhead `타는 곳 / Tracks / ① →` sign, blue route boards and tiled columns.
-- PASS — tourist identity is locked to `edit/generated/stills/tourist_lock_JP_v2.jpg` across every visible tourist frame.
-- PASS — S06 and S08 use the dedicated A04 right-concourse axis with true OTS continuity and no fare-gate background drift.
-- PASS — S12 handedness verified: watch-free right arm tags; watch-bearing left arm hangs down.
-- PASS — S13 provides a calm upper copy-safe region.
-- PASS — S13 handedness correction verified: referee screen-right, TOSS card in right hand, black watch on lowered left wrist.
+## 파일 검증
 
-Overall status: **PASS**
+- PASS — 최종 프레임 S01–S13: 13개, 각 1080×1920, RGB PNG.
+- PASS — 콘택트시트: 1488×2688 PNG, S01–S13 순서 유지.
+- PASS — A05·A06 구조 앵커와 두 장의 구조 참고 이미지가 저장되어 있다.
+- PASS — 매니페스트에 공간 앵커, 실패 회차, S04 시선, S12·S13 손 방향 메타데이터가 기록되어 있다.

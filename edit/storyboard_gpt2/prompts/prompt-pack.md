@@ -73,7 +73,7 @@ Inputs: A05/S03A = exact gate, card and second-attempt continuity; `tourist_lock
 
 ## S04
 
-Inputs: A05/S03B = exact gate, card and third-attempt continuity; `tourist_lock_JP_v2.jpg` = exact face, full bangs, eye shape, jawline and straight shoulder-length hair. Face reaction only, 70–85mm. Her gaze remains down at the card-reader contact point; eyebrows draw together slightly and lips part minimally in restrained puzzlement. Keep G3's red failure state and closed flap in soft contextual background. The same matte-gray unbranded card remains at the reader in her right hand. No TOSS card, no camera eye contact, no extra attempt, no exaggerated face or selfie angle.
+Inputs: A05/S03B = exact gate, card and third-attempt continuity; `tourist_lock_JP_v2.jpg` = exact face, full bangs, eye shape, jawline and straight shoulder-length hair. Face reaction only, 70–85mm. Her gaze remains down toward the now-offscreen card-reader contact point; eyebrows draw together slightly and lips part minimally in restrained puzzlement. Frame only the restrained facial reaction with no visible card, hand or reader. No TOSS card, no camera eye contact, no extra attempt, no exaggerated face or selfie angle.
 
 ## S05A
 
@@ -81,7 +81,7 @@ Inputs: S05 sketch = emphasis; referee sheet = identity; A03 = Korean setting. R
 
 ## S05B
 
-Inputs: S05 sketch = emphasis; referee sheet = identity; S05A = exact referee and body-axis continuity; A03 = Korean setting. Referee only. Tight head-and-shoulders sports-broadcast portrait of the same referee on the same vertical body axis, black whistle naturally at his mouth and full stern face visible. Striped shirt and lanyard preserved, restrained pale radial streaks at background edges. No tourist, card, stadium, captions or exaggerated expression.
+Inputs: S05 sketch = emphasis; referee sheet = identity; S05A = exact referee and body-axis continuity; A03 = Korean setting. Referee only. Tight head-and-shoulders sports-broadcast portrait of the same referee on the same vertical body axis, black whistle naturally at his mouth and full stern face visible. Striped shirt and lanyard preserved against the plain, photorealistic Korean station background. No radial streaks, rays or stylized effects; no tourist, card, stadium, captions or exaggerated expression.
 
 ## S06
 

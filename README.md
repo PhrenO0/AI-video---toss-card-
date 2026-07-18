@@ -10,6 +10,7 @@
 - 실패는 세 번만 발생합니다: 후면 와이드 → 하이 앵글 → 리더 높이 바텀뷰. 세 번째 실패 뒤에만 얼굴 반응을 둡니다.
 - S05는 심판의 풋살화에서 호루라기 얼굴까지 실제로 올라가는 붐업, S06은 관광객 없는 심판 단독 전신입니다.
 - S13은 G3 양쪽 플랩이 하우징 안으로 완전히 수납되고, 오른손 TOSS 태그·내린 왼손목 시계·상단 좌측 카피 안전영역을 갖습니다.
+- S02·S12·S13의 장면·인물·손·게이트는 승인된 생성 베이스를 보존하고, 카드 면만 [고정 좌표 합성 스크립트](edit/storyboard_gpt2/tools/composite_locked_cards.ps1)로 재현 가능하게 교정했습니다. S12·S13의 제품 글자·칩·로고는 AI 의사 텍스트가 아닌 공식 PNG 소스 픽셀입니다.
 
 ## 바로 보기
 
@@ -47,7 +48,7 @@
 edit/storyboard_gpt2/
 ├─ anchors/                 # A05 개찰구 홀, A06 오른쪽 복도 구조 앵커
 ├─ source_sketches/         # 사용자가 제공한 S01–S13 스토리보드 스케치
-├─ frames/raw/              # GPT Image 원본 메인 프레임
+├─ frames/raw/              # GPT Image 장면 + S02/S12/S13 고정 카드 면 합성
 ├─ frames/final/            # 정규화된 메인 납품 프레임 S01–S13
 ├─ frames/auxiliary/raw/    # 보조 제어 프레임 원본
 ├─ frames/auxiliary/        # 정규화된 S03A/S03B/S05A/S05B

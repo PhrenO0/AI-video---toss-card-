@@ -1,0 +1,105 @@
+<style>
+  body {
+    font: 13px/1.5 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 16px;
+    color: #171b23;
+  }
+  h1 { font-size: 15px; margin: 0 0 4px; }
+  p.hint { color: #5e6878; margin: 0 0 14px; font-size: 12px; }
+  label { display: block; font-weight: 600; margin: 14px 0 6px; }
+  textarea, input {
+    width: 100%; box-sizing: border-box; font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px; border: 1px solid #d5d9e0; border-radius: 6px; padding: 8px;
+  }
+  textarea { height: 240px; resize: vertical; }
+  .row { display: flex; gap: 8px; margin-top: 14px; }
+  button {
+    flex: 1; padding: 10px; border: 0; border-radius: 6px; cursor: pointer;
+    font-weight: 600; font-size: 13px;
+  }
+  button.primary { background: #0064ff; color: #fff; }
+  button.ghost { background: #eef0f4; color: #171b23; }
+  #status { margin-top: 12px; font-size: 12px; white-space: pre-wrap; }
+  #status.error { color: #d92d20; }
+  #status.ok { color: #067647; }
+</style>
+
+<h1>TOSS 카드뉴스 생성기</h1>
+<p class="hint">
+  <code>toss-content cardnews</code>가 만든 spec JSON을 붙여넣거나, 자동화 서버 URL에서 불러오세요.
+  파일에 <code>template/cover</code>, <code>template/body</code>, <code>template/outro</code> 프레임이
+  있으면 그 디자인을 그대로 복제합니다.
+</p>
+
+<label for="url">spec URL (선택)</label>
+<input id="url" placeholder="https://.../cardnews/<slug>.json" />
+
+<label for="spec">spec JSON</label>
+<textarea id="spec" placeholder='{"slug":"...","topic":"...","cards":[...]}'></textarea>
+
+<div class="row">
+  <button class="ghost" id="fetch">URL에서 불러오기</button>
+  <button class="ghost" id="inspect">템플릿 확인</button>
+</div>
+<div class="row">
+  <button class="primary" id="generate">카드 생성</button>
+  <button class="ghost" id="close">닫기</button>
+</div>
+
+<div id="status"></div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const setStatus = (text, kind) => {
+    $("status").textContent = text;
+    $("status").className = kind || "";
+  };
+
+  $("fetch").onclick = async () => {
+    const url = $("url").value.trim();
+    if (!url) return setStatus("URL을 입력해주세요.", "error");
+    setStatus("불러오는 중…");
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      $("spec").value = JSON.stringify(await response.json(), null, 2);
+      setStatus("spec을 불러왔습니다.", "ok");
+    } catch (error) {
+      setStatus("불러오기 실패: " + error.message, "error");
+    }
+  };
+
+  $("inspect").onclick = () => parent.postMessage({ pluginMessage: { type: "inspect" } }, "*");
+
+  $("generate").onclick = () => {
+    const spec = $("spec").value.trim();
+    if (!spec) return setStatus("spec JSON을 입력해주세요.", "error");
+    setStatus("생성 중…");
+    parent.postMessage({ pluginMessage: { type: "generate", spec } }, "*");
+  };
+
+  $("close").onclick = () => parent.postMessage({ pluginMessage: { type: "close" } }, "*");
+
+  onmessage = (event) => {
+    const msg = event.data.pluginMessage;
+    if (!msg) return;
+    if (msg.type === "done") {
+      setStatus(
+        `완료 — ${msg.result.nodeIds.length}장 생성 (페이지: ${msg.result.pageName})\n` +
+          `container: ${msg.result.containerId}\n` +
+          msg.result.nodeIds.join("\n"),
+        "ok",
+      );
+    } else if (msg.type === "inspect-result") {
+      setStatus(
+        msg.templates.length
+          ? "발견된 템플릿: " + msg.templates.join(", ")
+          : "template/* 프레임이 없습니다. 기본 레이아웃으로 생성됩니다.",
+        "ok",
+      );
+    } else if (msg.type === "error") {
+      setStatus("실패: " + msg.message, "error");
+    }
+  };
+</script>

@@ -1,0 +1,97 @@
+# 레퍼런스 수집 규칙 — 토큰은 절대 여기 적지 않는다 (.env 사용)
+#
+# kind: keyword | hashtag | account
+# platforms: 비워두면 모든 플랫폼에 적용
+
+sources:
+  # --- 자사/경쟁 브랜드 계정 모니터링 -------------------------------------
+  - kind: account
+    value: tossteam
+    label: 토스 공식
+    platforms: [x, instagram, threads]
+
+  - kind: account
+    value: kakaopay
+    label: 카카오페이
+    platforms: [instagram, x]
+
+  - kind: account
+    value: naverpay_official
+    label: 네이버페이
+    platforms: [instagram]
+
+  # --- 제품 키워드 --------------------------------------------------------
+  - kind: keyword
+    value: 선불카드
+    label: 선불카드
+  - kind: keyword
+    value: 교통카드
+    label: 교통카드
+  - kind: keyword
+    value: 청소년 체크카드
+    label: 청소년카드
+    platforms: [x, threads]
+
+  # --- 해시태그 (Instagram은 계정당 주 30개 고유 해시태그 제한에 유의) ----
+  - kind: hashtag
+    value: 카드뉴스
+    label: 카드뉴스 레퍼런스
+    platforms: [instagram]
+  - kind: hashtag
+    value: 핀테크마케팅
+    label: 핀테크 마케팅
+    platforms: [instagram]
+
+  # --- 일본 관광객 타깃 (진행 중인 광고 캠페인과 연계) --------------------
+  - kind: keyword
+    value: 韓国 交通カード
+    label: 일본어 · 한국 교통카드
+    platforms: [x, threads]
+
+collect:
+  lookback_hours: 48
+  per_query_limit: 25
+  min_engagement: 5
+  languages: [ko, ja, en]
+  exclude_keywords:
+    - 협찬
+    - 광고문의
+    - 도박
+    - 코인리딩
+  # 앞에서부터 시도하고 실패하면 다음으로 넘어간다.
+  providers:
+    x: [official, apify, rss]
+    instagram: [official, apify]
+    threads: [official, apify]
+
+ranking:
+  # 36시간이면 점수가 절반 — 신선도를 꽤 강하게 본다
+  half_life_hours: 36
+  weight_engagement: 1.0
+  weight_velocity: 1.4
+  weight_keyword: 0.6
+  weight_media: 0.3
+  boost_keywords:
+    - 토스
+    - 선불카드
+    - 교통카드
+    - 환전
+    - 여행
+
+slack:
+  # 실제 채널명으로 바꿔주세요. bot 모드에서는 #이름 또는 채널 ID 모두 가능합니다.
+  default_channel: "#콘텐츠-자동화"
+  digest_channel: "#콘텐츠-자동화"
+  digest_limit: 8
+  mention_on_digest: ""
+
+figma:
+  # https://www.figma.com/design/<file_key>/... 의 <file_key>
+  file_key: "ztuGJQdoVtA7u9pxvq8m4m"
+  template_node_id: "0:1"
+  page_name: "카드뉴스 자동생성"
+  export_scale: 2
+  export_format: png
+
+db_path: data/references.db
+out_dir: out

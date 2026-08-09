@@ -1,0 +1,86 @@
+name: 콘텐츠 자동화
+
+on:
+  schedule:
+    # 평일 09:00 KST = 00:00 UTC
+    - cron: "0 0 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "실행할 명령"
+        type: choice
+        default: daily
+        options: [daily, collect, digest, doctor]
+      topic:
+        description: "카드뉴스 주제 (입력 시 초안까지 생성)"
+        type: string
+        default: ""
+
+concurrency:
+  # 스케줄과 수동 실행이 겹쳐 같은 DB를 동시에 쓰지 않도록
+  group: content-automation
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: 의존성 설치
+        working-directory: automation
+        run: pip install -e ".[all]"
+
+      - name: 한글 폰트 설치 (카드뉴스 프리뷰용)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+
+      # 중복 수집과 다이제스트 재전송을 막으려면 SQLite 상태가 실행 간에 남아야 한다.
+      - name: 수집 DB 복원
+        uses: actions/cache@v4
+        with:
+          path: automation/data
+          key: refs-db-${{ github.run_id }}
+          restore-keys: refs-db-
+
+      - name: 실행
+        working-directory: automation
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_DIGEST_CHANNEL: ${{ vars.SLACK_DIGEST_CHANNEL }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_RSS_BASE: ${{ vars.X_RSS_BASE }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_BUSINESS_USER_ID: ${{ secrets.IG_BUSINESS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          toss-content doctor
+          toss-content ${{ inputs.command || 'daily' }}
+
+      - name: 카드뉴스 초안 생성 (주제 입력 시)
+        if: inputs.topic != ''
+        working-directory: automation
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_DIGEST_CHANNEL: ${{ vars.SLACK_DIGEST_CHANNEL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: toss-content cardnews "${{ inputs.topic }}" --post
+
+      - name: 산출물 업로드
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cardnews-output
+          path: automation/out/
+          if-no-files-found: ignore
+          retention-days: 14

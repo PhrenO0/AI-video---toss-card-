@@ -9,6 +9,8 @@ Toss for Travelers **Visitor** 서비스를 **일본인 관광객**에게 알리
 |---|---|
 | [docs/content-workflow.md](docs/content-workflow.md) | **우리 작업 방식** — 기획 원칙, 포맷 압축 매핑, 검수 체크리스트, 이미지 일관성 |
 | [docs/x-post-drafts.md](docs/x-post-drafts.md) | X 포스트 초안 10건 (일본어 + 한국어 해석 + 이미지 계획) |
+| [docs/instagram-drafts.md](docs/instagram-drafts.md) | 인스타 캐러셀 10장 + 릴스 30초 초안, 3채널 동시 발행 계획 |
+| [docs/ops-questions.md](docs/ops-questions.md) | 운영진 문의 사항 (복사해 보낼 수 있는 메시지) |
 | [docs/design-system.md](docs/design-system.md) | 카드 디자인 시스템 (컬러·타입·그리드·Figma 반입) |
 | [docs/references/](docs/references/) | 외부 레퍼런스 요약 3건 |
 | [docs/storyboard.md](docs/storyboard.md) | AI 광고 릴스 기획·스토리보드·프롬프트 |

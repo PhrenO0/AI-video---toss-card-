@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-07-18T00:00:00+09:00",
+  "assets": [
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/\uC7A5\uC18C\uC640 \uC778\uBB3C.png", "sha256": "69a10ceac90455f9fcde92cab5e7167eb490d5df26193b3ed7f14ea61f726757", "dimensions": { "width": 1024, "height": 1536 }, "role": "storyboard_master", "prohibited_use": [] },
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/\uC2A4\uD1A0\uB9AC\uBCF4\uB4DC 1.png", "sha256": "6aad3709f40c1c43428494cbb2378ce298423710470c3b1f24767ccbc78ad00f", "dimensions": { "width": 1024, "height": 1536 }, "role": "tourist_story_reference", "prohibited_use": [] },
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/\uC2A4\uD1A0\uB9AC 1.png", "sha256": "ff3ff490b4acd14bac76898b079ab200d6ac87c14d443389fb31f4055239b49b", "dimensions": { "width": 1024, "height": 1536 }, "role": "storyboard_reference_01", "prohibited_use": [] },
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/\uC2A4\uD1A0\uB9AC 2.png", "sha256": "87cb1e5b95efed9cd11f9d7ca684c20b4689bbae20d0a0c808d1d2730e7b449e", "dimensions": { "width": 1024, "height": 1536 }, "role": "storyboard_reference_02", "prohibited_use": [] },
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/\uC2A4\uD1A0\uB9AC 3.png", "sha256": "e24fd304b5a20271c9f5b993a166e6aa5725591094002f8853d292cbb9b260c2", "dimensions": { "width": 1024, "height": 1536 }, "role": "storyboard_reference_03", "prohibited_use": [] },
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/b55b92ad-5b3c-40e4-adb1-c9b8ba492165.png", "sha256": "111d9d1c61156dec56255f21ad6d8b82aa9300319e43cadaea405c065c6b9c2d", "dimensions": { "width": 1376, "height": 768 }, "role": "referee_sheet_reference", "prohibited_use": [] },
+    { "source_path": "260702_\uD1A0\uC2A4_\uC120\uBD88\uCE74\uB4DC_\uC560\uC14B_\uBAA8\uC74C\uC9D1/pre-card-hologram-front (1).png", "sha256": "52294caee8999c38d5b0e0fb27517f0cff18655083a4c395b7b4e3668bef1fda", "dimensions": { "width": 650, "height": 1024 }, "role": "exact_product_front", "prohibited_use": ["Do not replace this product view with generated branding in final imagery."] },
+    { "source_path": "ai \uC2A4\uD1A0\uB9AC\uBCF4\uB4DC/bc087e2e-1b35-44bf-a25a-0d598ef7482f.png", "sha256": "c4425ee5aaa198f5517f277bde9f1c5af3f17d3ee0efd034a3b352533ccf5f52", "dimensions": { "width": 1376, "height": 768 }, "role": "excluded_character_reference", "prohibited_use": ["Do not use for character generation, identity locking, or main-film compositing."] },
+    { "source_path": "260702_\uD1A0\uC2A4_\uC120\uBD88\uCE74\uB4DC_\uC560\uC14B_\uBAA8\uC74C\uC9D1/pre-card-bustag-holo-apng.png", "sha256": "ad7ff0ca8ee312cdab53e73f2144887aabdbe9b0a8b62ba5526e85d66287584b", "dimensions": { "width": 500, "height": 500 }, "role": "card_animation_reference", "prohibited_use": ["excluded_from_main_film"] },
+    { "source_path": "260702_\uD1A0\uC2A4_\uC120\uBD88\uCE74\uB4DC_\uC560\uC14B_\uBAA8\uC74C\uC9D1/hand-pre-card-hologram.png", "sha256": "fe71490c6c0613a63d2852c601c2dd52a5debf71ef9a7e8cdb90b58aa4b1bf0a", "dimensions": { "width": 1000, "height": 1000 }, "role": "3d_hand_reference", "prohibited_use": ["excluded_from_main_film"] },
+    { "source_path": "KakaoTalk_20260715_200455753.mp4", "sha256": "69d12701e8183f54e646ea165dd3809cbb05a3b4ce220529163a4411200a43a7", "dimensions": null, "role": "excluded_reference_video", "prohibited_use": ["Do not use as a main-film source, generation reference, or final-film footage."] }
+  ],
+  "render_spec": {
+    "orientation": "portrait",
+    "delivery": { "width": 1080, "height": 1920, "frame_rate": 30 },
+    "product_fidelity": "Use the immutable exact_product_front PNG for any readable final product-card view.",
+    "generation_status": "not_started"
+  }
+}

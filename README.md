@@ -1,75 +1,121 @@
-# AI Video — TOSS Card
+# TOSS 포리너 브릿지 크루 2기 — 콘텐츠 저장소
 
-한국을 여행하는 일본인 여성 관광객이 개찰구에서 세 번 실패한 `삐빅`의 정체를 축구 심판의 호루라기로 발견하고, TOSS 카드로 통과하는 19.0초 세로형 광고 스토리보드입니다. 무대사 코미디를 실제 한국 지하철의 구조감과 프리미엄 광고 톤으로 구성했습니다.
+Toss for Travelers **Visitor** 서비스를 **일본인 관광객**에게 알리는 콘텐츠 제작 저장소.
+세 갈래의 작업이 함께 있습니다 — ① AI 광고 릴스 ② X·Instagram 콘텐츠 기획 ③ 콘텐츠 자동화 툴킷.
 
-## 최신 납품 상태
+---
 
-- 메인 스토리보드는 **S01–S13**이며, 총 13장입니다.
-- 편집 리듬과 카메라 이동을 정밀하게 전달하는 보조 제어 프레임 **S03A/S03B/S05A/S05B** 4장을 추가했습니다.
-- 메인·보조 프레임은 모두 **1080×1920 RGB PNG**, 통합 콘택트시트는 **1488×3354 RGB PNG**입니다.
-- 실패는 세 번만 발생합니다: 후면 와이드 → 하이 앵글 → 리더 높이 바텀뷰. 세 번째 실패 뒤에만 얼굴 반응을 둡니다.
-- S05는 심판의 풋살화에서 호루라기 얼굴까지 실제로 올라가는 붐업, S06은 관광객 없는 심판 단독 전신입니다.
-- S13은 G3 양쪽 플랩이 하우징 안으로 완전히 수납되고, 오른손 TOSS 태그·내린 왼손목 시계·상단 좌측 카피 안전영역을 갖습니다.
-- S02·S12·S13의 장면·인물·손·게이트는 승인된 생성 베이스를 보존하고, 카드 면만 [고정 좌표 합성 스크립트](edit/storyboard_gpt2/tools/composite_locked_cards.ps1)로 재현 가능하게 교정했습니다. S12·S13의 제품 글자·칩·로고는 AI 의사 텍스트가 아닌 공식 PNG 소스 픽셀입니다.
+## 1. AI 광고 릴스
 
-## 바로 보기
+한국 지하철 개찰구에서 교통카드 결제에 세 번 실패한 일본인 여성 관광객 앞에
+축구 심판이 나타나 레드카드처럼 TOSS 선불카드를 선언하는 무대사 상황 코미디.
+세로형(9:16), 19.0초.
+
+### 최신 납품 상태
+
+- 메인 스토리보드 **S01–S13** (총 13장) + 보조 제어 프레임 **S03A/S03B/S05A/S05B** 4장
+- 메인·보조 프레임 **1080×1920 RGB PNG**, 통합 콘택트시트 **1488×3354 RGB PNG**
+- 실패는 세 번만 발생: 후면 와이드 → 하이 앵글 → 리더 높이 바텀뷰. 세 번째 실패 뒤에만 얼굴 반응
+- S02·S12·S13은 승인된 생성 베이스를 보존하고 카드 면만
+  [고정 좌표 합성 스크립트](edit/storyboard_gpt2/tools/composite_locked_cards.ps1)로 교정 —
+  제품 글자·칩·로고는 AI 의사 텍스트가 아닌 **공식 PNG 소스 픽셀**
+
+### 바로 보기
 
 - [17프레임 통합 콘택트시트](edit/storyboard_gpt2/review/contact-sheet.png)
 - [메인 최종 프레임 S01–S13](edit/storyboard_gpt2/frames/final/)
-- [S02 — 첫 실패, 엄격한 뒷모습](edit/storyboard_gpt2/frames/final/S02.png)
-- [S03B — 세 번째 실패, 리더 높이 바텀뷰](edit/storyboard_gpt2/frames/auxiliary/S03B.png)
-- [S04 — 세 번째 실패 뒤 반응](edit/storyboard_gpt2/frames/final/S04.png)
-- [S05A — 붐업 시작, 풋살화](edit/storyboard_gpt2/frames/auxiliary/S05A.png)
-- [S05B — 붐업 종료, 호루라기 얼굴](edit/storyboard_gpt2/frames/auxiliary/S05B.png)
-- [S06 — 심판 단독 전신](edit/storyboard_gpt2/frames/final/S06.png)
-- [S08 — A06 복도에서의 접근](edit/storyboard_gpt2/frames/final/S08.png)
-- [S12 — 오른손 성공 태그](edit/storyboard_gpt2/frames/final/S12.png)
 - [S13 — 완전히 열린 개찰구 엔딩](edit/storyboard_gpt2/frames/final/S13.png)
 
-## 제작자가 바로 사용할 문서·에셋
+### 제작 문서
 
-- [영상 프롬프트 명세](edit/storyboard_gpt2/review/video-prompt-spec.md) — S01–S13의 길이, 카메라, 모션, SFX, 전환, 금지 요소.
-- [QA 리포트](edit/storyboard_gpt2/review/qa-report.md) — 공간·캐릭터·제품·손 방향·엔딩 통로 검수.
-- [스토리보드 매니페스트](edit/storyboard_gpt2/storyboard-manifest.json) — 19.0초 연속 타임라인과 샷 메타데이터.
-- [연속성 바이블](edit/storyboard_gpt2/continuity-bible.md)
-- [이미지 생성 프롬프트 팩](edit/storyboard_gpt2/prompts/prompt-pack.md)
-- [A05 개찰구 홀 구조 앵커](edit/storyboard_gpt2/anchors/A05_gate_hall_structural_master.png)
-- [A06 오른쪽 복도 구조 앵커](edit/storyboard_gpt2/anchors/A06_right_concourse_structural_master.png)
-- [일본인 관광객 기준 인물](edit/generated/stills/tourist_lock_JP_v2.jpg)
-- [심판 기준 인물](edit/generated/stills/referee_lock_A.png)
-- [승인된 크리에이티브 디자인](docs/superpowers/specs/2026-07-18-toss-three-tap-referee-reveal-ending-design.md)
-- [승인된 구현 계획](docs/superpowers/plans/2026-07-18-toss-three-tap-referee-reveal-ending.md)
-- [기존 프리뷰 v01](edit/preview/TOSS_JP_reel_v01.mp4)
-- [기존 프리뷰 QA](edit/preview/QA_REPORT.md)
+| 문서 | 내용 |
+|---|---|
+| [docs/storyboard.md](docs/storyboard.md) | 초기 기획·스토리보드·프롬프트 |
+| [docs/production-log.md](docs/production-log.md) | 제작 로그 |
+| [edit/storyboard_gpt2/review/video-prompt-spec.md](edit/storyboard_gpt2/review/video-prompt-spec.md) | S01–S13 길이·카메라·모션·SFX·전환·금지 요소 |
+| [edit/storyboard_gpt2/review/qa-report.md](edit/storyboard_gpt2/review/qa-report.md) | 공간·캐릭터·제품·손 방향·엔딩 통로 검수 |
+| [edit/storyboard_gpt2/continuity-bible.md](edit/storyboard_gpt2/continuity-bible.md) | 연속성 바이블 |
+| [docs/superpowers/](docs/superpowers/) | 설계 스펙·구현 계획 |
+| [docs/toss-travelers-basutei.md](docs/toss-travelers-basutei.md) | 「バス停」편 통합 문서 |
+| [docs/video-prompts-basutei.md](docs/video-prompts-basutei.md) · [video-prompts-buswindow.md](docs/video-prompts-buswindow.md) | 영상 생성용 프롬프트 |
 
-## 폴더 구조
+### 폴더
 
 ```text
 edit/storyboard_gpt2/
-├─ anchors/                 # A05 개찰구 홀, A06 오른쪽 복도 구조 앵커
-├─ source_sketches/         # 사용자가 제공한 S01–S13 스토리보드 스케치
-├─ frames/raw/              # GPT Image 장면 + S02/S12/S13 고정 카드 면 합성
-├─ frames/final/            # 정규화된 메인 납품 프레임 S01–S13
-├─ frames/auxiliary/raw/    # 보조 제어 프레임 원본
-├─ frames/auxiliary/        # 정규화된 S03A/S03B/S05A/S05B
-├─ prompts/                 # 이미지 생성 프롬프트와 연속성 잠금
-├─ review/                  # 콘택트시트, QA, 영상 프롬프트 명세
-├─ tools/                   # 정규화·콘택트시트 생성 스크립트
-└─ tests/                   # 정규화 스크립트 테스트
+├─ anchors/          # 구조 앵커 (개찰구 홀, 복도)
+├─ source_sketches/  # 사용자 제공 S01–S13 스케치
+├─ frames/final/      # 정규화된 메인 납품 프레임
+├─ frames/auxiliary/  # 정규화된 보조 제어 프레임
+├─ prompts/           # 이미지 생성 프롬프트·연속성 잠금
+├─ review/            # 콘택트시트, QA, 영상 프롬프트 명세
+└─ tools/ · tests/    # 합성·정규화 스크립트
 
-edit/
-├─ generated/               # 캐릭터 시트와 생성 스틸
-├─ assembly/                # 편집 세그먼트
-├─ audio/                   # 효과음·환경음·내레이션 정보
-├─ preview/                 # 기존 렌더와 QA
-├─ prompts/                 # 기존 영상 생성 프롬프트
-└─ production/              # 자산 매니페스트와 연속성 규칙
+ai 스토리보드/                        # 손그림 스토리보드 원본
+assets/toss-card/                    # 카드 공식 애셋 — AI 생성 시 reference 필수
+260702_토스_선불카드_애셋_모음집/        # 카드 공식 애셋 (원본 모음집)
+clips/ · output/                     # 생성 클립 · 최종본
 ```
 
-## 검증
+검증: `python -m pytest edit/storyboard_gpt2/tests/test_prepare_storyboard.py -q`
 
-```powershell
-python -m pytest edit/storyboard_gpt2/tests/test_prepare_storyboard.py -q
+---
+
+## 2. X·Instagram 콘텐츠 기획
+
+Toss for Travelers Visitor 서비스를 일본인 관광객에게 알리는 X·Instagram 초안과
+그 근거가 된 작업 방식. 채널: Instagram(릴스·캐러셀) · X · TikTok · Threads.
+
+| 문서 | 내용 |
+|---|---|
+| [docs/content-workflow.md](docs/content-workflow.md) | **우리 작업 방식** — 기획 원칙, 포맷 압축 매핑, 검수 체크리스트, 이미지 일관성 |
+| [docs/x-post-drafts.md](docs/x-post-drafts.md) | X 포스트 초안 10건 (일본어 + 한국어 해석 + 이미지 계획) |
+| [docs/instagram-drafts.md](docs/instagram-drafts.md) | 인스타 캐러셀 10장 + 릴스 30초 초안, 3채널 동시 발행 계획 |
+| [docs/ops-questions.md](docs/ops-questions.md) | 운영진 문의 사항 (복사해 보낼 수 있는 메시지) |
+| [docs/design-system.md](docs/design-system.md) | 카드 디자인 시스템 (컬러·타입·그리드·Figma 반입) |
+| [docs/references/](docs/references/) | 외부 레퍼런스 요약 3건 |
+
+`assets/design/` — 정보 카드 SVG 5종 (Figma 편집 가능)
+
+### 작업 전 반드시 확인
+
+1. **표현 규칙 4가지** — `プリペイドカード` 명시 / `最初の1枚` 한정 / `カード払いができるお店` 조건 /
+   `T-money対応の` 한정. 다듬다가 빠지면 그 순간 금지 표현이 된다
+2. **`両替不要` 류 소구 금지** — 일본 결제수단이 충전수단 목록에 없어 원화 현금이 필요하다
+3. **AI 생성 금지 영역** — 카드 실물 · 앱 화면 · 결제 순간은 실촬영/실캡처/공식 애셋만
+4. **디스클레이머** — 제품 언급 포스트에 `#PR`, 이미지 안에도 표기
+
+자세한 내용은 [docs/content-workflow.md](docs/content-workflow.md) §3, §4 참조.
+
+---
+
+## 3. 콘텐츠 자동화 툴킷 (`automation/`)
+
+레퍼런스 수집 → 슬랙 공유 → 카드뉴스 제작을 잇는 파이프라인.
+
+```
+X / Instagram / Threads          Slack                     Figma
+        │                          │                         │
+   수집 · 랭킹  ────────►  일일 다이제스트 ──►  카드뉴스 초안 ──►  플러그인이 카드 생성
+        │                     승인 버튼              │              │
+   SQLite 저장                                  프리뷰 PNG      PNG export
 ```
 
-검증 스크립트는 보조 프레임 정규화, 1080×1920 RGB 출력, 기존/확장 콘택트시트 크기를 확인합니다.
+```bash
+cd automation
+pip install -e ".[all]"
+cp .env.example .env      # 있는 토큰만 채우면 됩니다
+toss-content doctor       # 무엇이 연결됐는지 확인
+```
+
+토큰이 하나도 없어도 동작합니다 — 수집은 0건, 슬랙은 dry-run으로 떨어집니다.
+
+| 문서 | 내용 |
+|---|---|
+| [automation/README.md](automation/README.md) | 명령어·구조·설계 메모 |
+| [docs/automation/01-slack-setup.md](docs/automation/01-slack-setup.md) | 토스 Enterprise Grid 앱 설치, 스코프, 승인 대기 시 대안 |
+| [docs/automation/02-reference-collection.md](docs/automation/02-reference-collection.md) | X/IG/Threads API 현실과 폴백 전략, 랭킹 설계 |
+| [docs/automation/03-figma-cardnews.md](docs/automation/03-figma-cardnews.md) | 템플릿 규칙, 플러그인 설치, spec 형식 |
+
+`.github/workflows/content-automation.yml` 이 평일 오전 9시(KST)에 수집 + 슬랙 다이제스트를 돌립니다.
+저장소 **Settings → Secrets and variables → Actions** 에 토큰을 등록하세요.

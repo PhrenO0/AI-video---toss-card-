@@ -1,5 +1,25 @@
+# 비밀값
+.env
+automation/.env
+
+# 자동 생성물
+automation/data/
+automation/out/
+automation/**/__pycache__/
+automation/*.egg-info/
+automation/src/*.egg-info/
 .pytest_cache/
 __pycache__/
 *.pyc
 *_candidate_*.png
 .superpowers/
+
+# 영상 제작 중간 산출물 (용량이 커서 커밋하지 않음)
+clips/*.mp4
+output/*.mp4
+!clips/.gitkeep
+!output/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+name: 테스트
+
+on:
+  push:
+    paths: ["automation/**", ".github/workflows/tests.yml"]
+  pull_request:
+    paths: ["automation/**", ".github/workflows/tests.yml"]
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: 의존성 설치
+        working-directory: automation
+        run: pip install -e ".[all]"
+      - name: 테스트
+        working-directory: automation
+        run: python -m pytest -q
+      - name: CLI 스모크 테스트 (토큰 없이도 동작해야 함)
+        working-directory: automation
+        run: |
+          toss-content doctor
+          toss-content collect
+          toss-content cardnews "스모크 테스트" --cards 3

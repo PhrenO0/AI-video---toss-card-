@@ -1,0 +1,33 @@
+[project]
+name = "toss-content"
+version = "0.1.0"
+description = "토스 콘텐츠 자동화 — 소셜 레퍼런스 수집, 슬랙 연동, 카드뉴스 제작"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# 슬랙 Socket Mode 봇을 돌릴 때만 필요 (다이제스트 전송은 requests만으로 동작)
+slack = ["slack_bolt>=1.21"]
+# 로컬 카드뉴스 프리뷰 렌더링
+render = ["Pillow>=10.0"]
+# Claude 기반 카피 생성
+llm = ["anthropic>=0.69"]
+dev = ["pytest>=8.0"]
+all = ["slack_bolt>=1.21", "Pillow>=10.0", "anthropic>=0.69", "pytest>=8.0"]
+
+[project.scripts]
+toss-content = "toss_content.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

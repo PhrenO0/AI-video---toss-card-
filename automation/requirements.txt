@@ -1,0 +1,8 @@
+# 최소 실행 세트 (수집 + 슬랙 다이제스트 + Figma REST)
+requests>=2.32
+PyYAML>=6.0
+
+# 선택 기능 — 필요할 때만 주석 해제하거나 `pip install -e ".[all]"` 사용
+# slack_bolt>=1.21   # /toss-ref, /toss-cardnews 슬래시 커맨드 (Socket Mode)
+# Pillow>=10.0       # 카드뉴스 로컬 프리뷰
+# anthropic>=0.69    # Claude 기반 카피 생성

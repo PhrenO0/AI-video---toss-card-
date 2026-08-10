@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="Noto Sans JP">
+  <rect width="1080" height="1080" fill="#12161C"/>
+  <rect x="96" y="96" width="6" height="52" fill="#E8A33D"/>
+  <text x="124" y="136" fill="#E8A33D" font-size="26" font-weight="500" letter-spacing="5">韓国旅行メモ</text>
+
+  <text x="96" y="288" fill="#F2EEE6" font-size="66" font-weight="700" letter-spacing="-1">レジの前で</text>
+  <text x="96" y="366" fill="#F2EEE6" font-size="66" font-weight="700" letter-spacing="-1">困らないために</text>
+
+  <rect x="96" y="460" width="416" height="380" rx="8" fill="#1A2029"/>
+  <text x="136" y="528" fill="#8B9099" font-size="28" font-weight="500">海外発行のカード</text>
+  <rect x="136" y="556" width="56" height="2" fill="#3A424C"/>
+  <text x="136" y="626" fill="#C6C2BA" font-size="32" font-weight="400">お店によっては</text>
+  <text x="136" y="674" fill="#C6C2BA" font-size="32" font-weight="400">通らないことが</text>
+  <text x="136" y="722" fill="#C6C2BA" font-size="32" font-weight="400">あります</text>
+
+  <rect x="568" y="460" width="416" height="380" rx="8" fill="#241C0C"/>
+  <rect x="568" y="460" width="416" height="4" rx="2" fill="#E8A33D"/>
+  <text x="608" y="528" fill="#E8A33D" font-size="28" font-weight="500">韓国発行のカード</text>
+  <rect x="608" y="556" width="56" height="2" fill="#5C4718"/>
+  <text x="608" y="626" fill="#F2EEE6" font-size="32" font-weight="400">カード払いが</text>
+  <text x="608" y="674" fill="#F2EEE6" font-size="32" font-weight="400">できるお店で</text>
+  <text x="608" y="722" fill="#F2EEE6" font-size="32" font-weight="400">そのまま使える</text>
+
+  <text x="96" y="920" fill="#8B9099" font-size="28" font-weight="400">「全部クレカでいける」と思っていると、困ることも</text>
+
+  <rect x="96" y="972" width="888" height="1" fill="#2A313A"/>
+  <text x="96" y="1024" fill="#8B9099" font-size="22" font-weight="400" letter-spacing="1">トス公式アカウントではありません（大学生クルー運営）</text>
+  <text x="984" y="1024" fill="#E8A33D" font-size="22" font-weight="700" text-anchor="end">PR</text>
+</svg>

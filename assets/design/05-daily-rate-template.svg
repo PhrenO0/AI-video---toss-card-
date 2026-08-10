@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="Noto Sans JP">
+  <rect width="1080" height="1080" fill="#12161C"/>
+  <rect x="96" y="96" width="6" height="52" fill="#E8A33D"/>
+  <text x="124" y="136" fill="#E8A33D" font-size="26" font-weight="500" letter-spacing="5">本日のレート</text>
+
+  <text x="96" y="392" fill="#8B9099" font-size="34" font-weight="400">10,000円</text>
+
+  <text x="96" y="520" fill="#F2EEE6" font-size="118" font-weight="700" letter-spacing="-3">88,600</text>
+  <text x="620" y="520" fill="#E8A33D" font-size="56" font-weight="500">ウォン</text>
+
+  <rect x="96" y="596" width="200" height="3" fill="#E8A33D"/>
+
+  <text x="96" y="700" fill="#8B9099" font-size="30" font-weight="400">8月11日 9:00時点</text>
+
+  <text x="96" y="852" fill="#C6C2BA" font-size="32" font-weight="400">レートは日々変わります。</text>
+  <text x="96" y="900" fill="#C6C2BA" font-size="32" font-weight="400">出発前にもう一度チェックを。</text>
+
+  <rect x="96" y="972" width="888" height="1" fill="#2A313A"/>
+  <text x="96" y="1024" fill="#8B9099" font-size="22" font-weight="400" letter-spacing="1">トス公式アカウントではありません（大学生クルー運営）</text>
+</svg>

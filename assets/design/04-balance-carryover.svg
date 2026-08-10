@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="Noto Sans JP">
+  <rect width="1080" height="1080" fill="#12161C"/>
+  <rect x="96" y="96" width="6" height="52" fill="#E8A33D"/>
+  <text x="124" y="136" fill="#E8A33D" font-size="26" font-weight="500" letter-spacing="5">韓国旅行メモ</text>
+
+  <text x="96" y="300" fill="#F2EEE6" font-size="72" font-weight="700" letter-spacing="-1">残高は、</text>
+  <text x="96" y="386" fill="#F2EEE6" font-size="72" font-weight="700" letter-spacing="-1">消えません</text>
+
+  <rect x="96" y="500" width="330" height="220" rx="8" fill="#1A2029"/>
+  <text x="136" y="576" fill="#8B9099" font-size="26" font-weight="500">今回の旅</text>
+  <text x="136" y="646" fill="#C6C2BA" font-size="34" font-weight="400">使いきれず</text>
+
+  <text x="474" y="620" fill="#E8A33D" font-size="52" font-weight="400">→</text>
+
+  <rect x="574" y="500" width="410" height="220" rx="8" fill="#241C0C"/>
+  <rect x="574" y="500" width="410" height="4" rx="2" fill="#E8A33D"/>
+  <text x="614" y="576" fill="#E8A33D" font-size="26" font-weight="500">次に韓国へ来たとき</text>
+  <text x="614" y="646" fill="#F2EEE6" font-size="34" font-weight="400">また使えます</text>
+
+  <text x="96" y="820" fill="#C6C2BA" font-size="32" font-weight="400">チャージしたトスマネーは、旅行が</text>
+  <text x="96" y="868" fill="#C6C2BA" font-size="32" font-weight="400">終わってもそのまま残ります</text>
+
+  <text x="96" y="932" fill="#8B9099" font-size="24" font-weight="400">払い戻し方法は最新のアプリ案内をご確認ください</text>
+
+  <rect x="96" y="972" width="888" height="1" fill="#2A313A"/>
+  <text x="96" y="1024" fill="#8B9099" font-size="22" font-weight="400" letter-spacing="1">トス公式アカウントではありません（大学生クルー運営）</text>
+  <text x="984" y="1024" fill="#E8A33D" font-size="22" font-weight="700" text-anchor="end">PR</text>
+</svg>

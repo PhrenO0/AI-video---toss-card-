@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="Noto Sans JP">
+  <rect width="1080" height="1080" fill="#12161C"/>
+  <rect x="96" y="96" width="6" height="52" fill="#E8A33D"/>
+  <text x="124" y="136" fill="#E8A33D" font-size="26" font-weight="500" letter-spacing="5">韓国旅行メモ</text>
+
+  <text x="96" y="288" fill="#F2EEE6" font-size="66" font-weight="700" letter-spacing="-1">どのカードを</text>
+  <text x="96" y="366" fill="#F2EEE6" font-size="66" font-weight="700" letter-spacing="-1">持っていく？</text>
+
+  <text x="96" y="502" fill="#F2EEE6" font-size="36" font-weight="500">荷物を増やしたくない</text>
+  <text x="120" y="556" fill="#E8A33D" font-size="32" font-weight="400">→ 決済と交通が1枚のもの</text>
+
+  <text x="96" y="676" fill="#F2EEE6" font-size="36" font-weight="500">カードが弾かれるのが不安</text>
+  <text x="120" y="730" fill="#E8A33D" font-size="32" font-weight="400">→ 韓国で発行するもの</text>
+
+  <text x="96" y="850" fill="#F2EEE6" font-size="36" font-weight="500">最初にお金をかけたくない</text>
+  <text x="120" y="904" fill="#E8A33D" font-size="32" font-weight="400">→ 発行料がかからないもの</text>
+
+  <rect x="96" y="972" width="888" height="1" fill="#2A313A"/>
+  <text x="96" y="1024" fill="#8B9099" font-size="22" font-weight="400" letter-spacing="1">トス公式アカウントではありません（大学生クルー運営）</text>
+  <text x="984" y="1024" fill="#E8A33D" font-size="22" font-weight="700" text-anchor="end">PR</text>
+</svg>

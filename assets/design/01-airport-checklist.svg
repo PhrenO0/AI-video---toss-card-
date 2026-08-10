@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="Noto Sans JP">
+  <rect width="1080" height="1080" fill="#12161C"/>
+  <rect x="96" y="96" width="6" height="52" fill="#E8A33D"/>
+  <text x="124" y="136" fill="#E8A33D" font-size="26" font-weight="500" letter-spacing="5">韓国旅行メモ</text>
+
+  <text x="96" y="288" fill="#F2EEE6" font-size="66" font-weight="700" letter-spacing="-1">仁川空港、着いたら</text>
+  <text x="96" y="366" fill="#F2EEE6" font-size="66" font-weight="700" letter-spacing="-1">この5つだけ</text>
+
+  <text x="96" y="500" fill="#E8A33D" font-size="30" font-weight="700">01</text>
+  <text x="180" y="500" fill="#F2EEE6" font-size="36" font-weight="400">入国審査</text>
+
+  <text x="96" y="588" fill="#E8A33D" font-size="30" font-weight="700">02</text>
+  <text x="180" y="588" fill="#F2EEE6" font-size="36" font-weight="400">預けた荷物を受け取る</text>
+
+  <text x="96" y="676" fill="#E8A33D" font-size="30" font-weight="700">03</text>
+  <text x="180" y="676" fill="#F2EEE6" font-size="36" font-weight="400">SIM・eSIMを準備</text>
+
+  <text x="96" y="764" fill="#E8A33D" font-size="30" font-weight="700">04</text>
+  <text x="180" y="764" fill="#F2EEE6" font-size="36" font-weight="400">Toss Visitorカードを用意</text>
+
+  <text x="96" y="852" fill="#E8A33D" font-size="30" font-weight="700">05</text>
+  <text x="180" y="852" fill="#F2EEE6" font-size="36" font-weight="400">空港鉄道でソウル市内へ</text>
+
+  <text x="96" y="932" fill="#8B9099" font-size="28" font-weight="400">保存しておくと当日あわてません</text>
+
+  <rect x="96" y="972" width="888" height="1" fill="#2A313A"/>
+  <text x="96" y="1024" fill="#8B9099" font-size="22" font-weight="400" letter-spacing="1">トス公式アカウントではありません（大学生クルー運営）</text>
+  <text x="984" y="1024" fill="#E8A33D" font-size="22" font-weight="700" text-anchor="end">PR</text>
+</svg>

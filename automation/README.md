@@ -3,11 +3,11 @@
 레퍼런스 수집 → 슬랙 공유 → 카드뉴스 제작까지 이어지는 파이프라인.
 
 ```
-X / Instagram / Threads          Slack                     Figma
-        │                          │                         │
-   수집 · 랭킹  ────────►  일일 다이제스트 ──►  카드뉴스 초안 ──►  플러그인이 카드 생성
-        │                     승인 버튼              │              │
-   SQLite 저장                                  프리뷰 PNG      PNG export
+X / Instagram / Threads       Slack              Notion              Figma
+        │                       │                  │                   │
+   수집 · 랭킹 ──────►  일일 다이제스트      콘텐츠 목록 DB      플러그인이 카드 생성
+        │                  승인 버튼         주제만 적으면 ──►         │
+   SQLite 저장                              레퍼런스·카피 자동      PNG export
 ```
 
 ## 빠른 시작
@@ -33,7 +33,11 @@ toss-content doctor       # 무엇이 연결됐는지 확인
 | `toss-content cardnews "주제"` | 카드뉴스 초안 + 프리뷰 (`--post` 로 슬랙 게시) |
 | `toss-content figma inspect` | Figma 파일의 프레임 목록 |
 | `toss-content figma export --nodes "1:2,1:3"` | 노드를 PNG로 내려받기 |
-| `toss-content daily` | collect + digest (CI용) |
+| `toss-content notion find` | 통합에 공유된 Notion DB 찾기 |
+| `toss-content notion schema` | DB 칼럼과 자동 매핑 결과 확인 |
+| `toss-content notion pending` | 채울 대기 행 목록 |
+| `toss-content notion fill` | 대기 행을 자동으로 채우기 (`--dry-run` 지원) |
+| `toss-content daily` | collect + digest + notion fill (CI용) |
 | `toss-content slack-app` | 슬래시 커맨드 봇 (Socket Mode) |
 
 ## 구조
@@ -52,6 +56,7 @@ automation/
 │   ├── slack/                 client · blocks · digest · app(Socket Mode)
 │   ├── cardnews/              compose(Claude/규칙) · render(프리뷰)
 │   ├── figma/                 REST 클라이언트 (읽기 · export · 코멘트)
+│   ├── notion/                client(2025-09-03 data source) · schema · blocks · sync
 │   ├── pipeline.py            end-to-end 조합
 │   └── cli.py                 CLI 진입점
 ├── figma-plugin/              노드 생성 담당 (REST로는 불가능한 부분)
@@ -66,11 +71,14 @@ automation/
 
 **왜 dry-run이 기본인가** — 토스 Enterprise Grid는 앱 설치에 조직 승인이 필요합니다. 승인 대기 중에도 나머지를 개발·검증할 수 있어야 해서, 토큰이 없으면 자동으로 dry-run으로 떨어집니다.
 
+**왜 Notion 스키마를 실행 시점에 읽는가** — 상대 DB의 칼럼 이름과 타입을 미리 알 수 없고 나중에 바뀌기도 합니다. 타입이 안 맞으면 Notion은 400을 냅니다. 그래서 매 실행마다 스키마를 읽어 논리 필드를 실제 칼럼에 매핑하고, 없는 칼럼은 건너뜁니다 — 칼럼 하나 때문에 전체가 실패하지 않게.
+
 ## 문서
 
 - [슬랙 연동](../docs/automation/01-slack-setup.md)
 - [레퍼런스 수집](../docs/automation/02-reference-collection.md)
 - [카드뉴스 · Figma](../docs/automation/03-figma-cardnews.md)
+- [노션 콘텐츠 목록](../docs/automation/04-notion-setup.md)
 
 ## 테스트
 

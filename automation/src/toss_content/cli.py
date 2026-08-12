@@ -45,6 +45,12 @@ def cmd_doctor(args, settings, store) -> int:
         ("Apify (폴백 수집)", bool(os.environ.get("APIFY_TOKEN")), "APIFY_TOKEN"),
         ("Figma", bool(settings.figma_token), "FIGMA_TOKEN"),
         ("Figma 파일 키", bool(settings.figma.file_key), "config/sources.yaml → figma.file_key"),
+        ("Notion", bool(settings.notion_token), "NOTION_TOKEN"),
+        (
+            "Notion 콘텐츠 목록 DB",
+            bool(settings.notion.database_id),
+            "notion.database_id (`toss-content notion find` 로 확인)",
+        ),
         ("Claude (카피 생성)", bool(os.environ.get("ANTHROPIC_API_KEY")), "ANTHROPIC_API_KEY"),
     ]
     print("\n연동 상태\n" + "─" * 56)
@@ -131,6 +137,87 @@ def cmd_figma(args, settings, store) -> int:
     return 0
 
 
+def cmd_notion(args, settings, store) -> int:
+    from .notion import from_settings as notion_from_settings
+    from .notion import run_fill
+    from .notion.client import extract_id
+    from .notion.schema import DEFAULT_ALIASES, resolve_property
+
+    client = notion_from_settings(settings)
+
+    if args.notion_command == "find":
+        me = client.whoami()
+        print(f"인증 OK: {me.get('name') or me.get('bot', {}).get('owner', {}).get('type', '')}\n")
+        results = client.search_data_sources(args.query)
+        if not results:
+            print(
+                "통합에 공유된 데이터베이스가 없습니다.\n"
+                "Notion에서 대상 DB → ⋯ → 연결(Connections) → 통합을 추가해주세요."
+            )
+            return 1
+        print("공유된 데이터베이스:")
+        for item in results:
+            print(f"\n  {item['title'] or '(제목 없음)'}")
+            print(f"    database_id : {item['database_id']}")
+            print(f"    url         : {item['url']}")
+            for source in item["data_sources"]:
+                print(f"    data source : {source['name']} ({source['id']})")
+        return 0
+
+    if not settings.notion.database_id:
+        print(
+            "notion.database_id 가 설정되지 않았습니다.\n"
+            "`toss-content notion find` 로 ID를 찾아 config/sources.yaml 에 넣어주세요.",
+            file=sys.stderr,
+        )
+        return 1
+
+    if args.notion_command == "schema":
+        schema = client.get_schema(settings.notion.database_id)
+        print(f"데이터베이스: {extract_id(settings.notion.database_id)}\n")
+        print("실제 칼럼:")
+        for name, type_ in schema.items():
+            print(f"  · {name:<24} {type_}")
+
+        print("\n논리 필드 매핑 (자동 감지 결과):")
+        for logical in DEFAULT_ALIASES:
+            resolved = resolve_property(logical, schema, settings.notion.properties)
+            mark = "✅" if resolved else "⬜"
+            print(f"  {mark} {logical:<14} → {resolved or '(없음 — 이 필드는 건너뜁니다)'}")
+        print(
+            "\n자동 감지가 틀렸다면 config/sources.yaml 의 notion.properties 에 "
+            "논리필드: 실제칼럼명 으로 지정하세요."
+        )
+        return 0
+
+    if args.notion_command == "pending":
+        from .notion.sync import pending_rows
+
+        rows = pending_rows(client, settings)
+        if not rows:
+            print("채울 행이 없습니다.")
+            return 0
+        print(f"대기 중인 행 {len(rows)}개:")
+        for row in rows:
+            print(f"  · {row['topic']}  (상태: {row['status'] or '비어 있음'})")
+        return 0
+
+    if args.notion_command == "fill":
+        results = run_fill(client, settings, store, limit=args.limit, dry_run=args.dry_run)
+        if not results:
+            print("채울 행이 없습니다.")
+            return 0
+        for result in results:
+            icon = {"filled": "✅", "skipped": "⏭", "failed": "❌"}[result.status]
+            detail = result.error or f"{result.slug} · 레퍼런스 {result.reference_count}건"
+            print(f"  {icon} {result.topic} — {detail}")
+            if result.skipped_fields:
+                print(f"      기록 못 한 필드: {', '.join(result.skipped_fields)}")
+        return 1 if any(r.status == "failed" for r in results) else 0
+
+    return 0
+
+
 def cmd_daily(args, settings, store) -> int:
     result = pipeline.run_daily(settings, store)
     print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
@@ -187,7 +274,24 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_figma.set_defaults(func=cmd_figma)
 
-    sub.add_parser("daily", help="collect + digest (CI용)").set_defaults(func=cmd_daily)
+    p_notion = sub.add_parser("notion", help="Notion 콘텐츠 목록 연동")
+    notion_sub = p_notion.add_subparsers(dest="notion_command", required=True)
+
+    p_find = notion_sub.add_parser("find", help="통합에 공유된 DB 찾기")
+    p_find.add_argument("--query", default="", help="DB 제목 검색어")
+
+    notion_sub.add_parser("schema", help="DB 칼럼과 자동 매핑 결과 확인")
+    notion_sub.add_parser("pending", help="채울 대기 행 목록")
+
+    p_fill = notion_sub.add_parser("fill", help="대기 행을 자동으로 채우기")
+    p_fill.add_argument("--limit", type=int, default=5, help="한 번에 처리할 행 수")
+    p_fill.add_argument("--dry-run", action="store_true", help="Notion에 쓰지 않고 결과만 확인")
+
+    p_notion.set_defaults(func=cmd_notion)
+
+    sub.add_parser("daily", help="collect + digest + notion fill (CI용)").set_defaults(
+        func=cmd_daily
+    )
     sub.add_parser("slack-app", help="Socket Mode 봇 실행").set_defaults(func=cmd_slack_app)
 
     return parser
@@ -200,11 +304,12 @@ def main(argv: list[str] | None = None) -> int:
     store = Store(settings.db_path)
 
     from .figma.client import FigmaError
+    from .notion.client import NotionError
     from .slack.client import SlackError
 
     try:
         return args.func(args, settings, store)
-    except (FigmaError, SlackError) as exc:
+    except (FigmaError, SlackError, NotionError) as exc:
         # 설정 누락은 사용자가 고칠 문제다 — 트레이스백 대신 안내만 보여준다.
         print(f"\n✗ {exc}\n", file=sys.stderr)
         if args.verbose:

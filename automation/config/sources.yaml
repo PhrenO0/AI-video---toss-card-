@@ -85,6 +85,28 @@ slack:
   digest_limit: 8
   mention_on_digest: ""
 
+notion:
+  # 콘텐츠 목록 DB. Notion에서 DB를 열고 URL을 통째로 붙여넣어도 됩니다.
+  # ⚠️ 페이지 URL이 아니라 **데이터베이스** URL이어야 합니다.
+  #    (DB를 전체 페이지로 연 뒤 주소창의 URL, 또는 DB 우클릭 → 링크 복사)
+  #    모르면 `toss-content notion find` 로 찾을 수 있습니다.
+  database_id: ""
+  # 레퍼런스를 따로 쌓고 싶을 때만 (선택)
+  reference_database_id: ""
+
+  # 상태가 비어 있거나 아래 값 중 하나면 '채워야 할 행'으로 봅니다.
+  trigger_status: [요청, 대기, todo, "not started", 새 요청]
+  done_status: [완료, done]
+  failed_status: 실패
+  card_count: 6
+
+  # 칼럼 자동 감지가 틀릴 때만 직접 지정하세요.
+  # `toss-content notion schema` 로 실제 칼럼 이름을 확인할 수 있습니다.
+  # properties:
+  #   topic: 콘텐츠 제목
+  #   status: 진행 상태
+  #   copy: 카피 초안
+
 figma:
   # https://www.figma.com/design/<file_key>/... 의 <file_key>
   file_key: "ztuGJQdoVtA7u9pxvq8m4m"

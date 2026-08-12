@@ -10,7 +10,7 @@ on:
         description: "실행할 명령"
         type: choice
         default: daily
-        options: [daily, collect, digest, doctor]
+        options: [daily, collect, digest, doctor, "notion fill", "notion pending"]
       topic:
         description: "카드뉴스 주제 (입력 시 초안까지 생성)"
         type: string
@@ -61,6 +61,8 @@ jobs:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ vars.NOTION_DATABASE_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           toss-content doctor

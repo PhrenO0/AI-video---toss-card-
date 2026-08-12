@@ -20,11 +20,11 @@
 레퍼런스 수집 → 슬랙 공유 → 카드뉴스 제작을 잇는 파이프라인.
 
 ```
-X / Instagram / Threads          Slack                     Figma
-        │                          │                         │
-   수집 · 랭킹  ────────►  일일 다이제스트 ──►  카드뉴스 초안 ──►  플러그인이 카드 생성
-        │                     승인 버튼              │              │
-   SQLite 저장                                  프리뷰 PNG      PNG export
+X / Instagram / Threads       Slack              Notion              Figma
+        │                       │                  │                   │
+   수집 · 랭킹 ──────►  일일 다이제스트      콘텐츠 목록 DB      플러그인이 카드 생성
+        │                  승인 버튼         주제만 적으면 ──►         │
+   SQLite 저장                              레퍼런스·카피 자동      PNG export
 ```
 
 ```bash
@@ -44,6 +44,7 @@ toss-content doctor       # 무엇이 연결됐는지 확인
 | [01-slack-setup.md](docs/automation/01-slack-setup.md) | 토스 Enterprise Grid 앱 설치, 스코프, 승인 대기 시 대안 |
 | [02-reference-collection.md](docs/automation/02-reference-collection.md) | X/IG/Threads API 현실과 폴백 전략, 랭킹 설계 |
 | [03-figma-cardnews.md](docs/automation/03-figma-cardnews.md) | 템플릿 규칙, 플러그인 설치, spec 형식 |
+| [04-notion-setup.md](docs/automation/04-notion-setup.md) | 통합 연결, DB 구성, 자동 채우기 규칙 |
 
 ### 자동 실행
 

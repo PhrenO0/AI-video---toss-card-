@@ -94,12 +94,32 @@ class FigmaConfig:
 
 
 @dataclass
+class NotionConfig:
+    #: 콘텐츠 목록 DB. URL 전체를 넣어도 ID를 알아서 뽑는다.
+    database_id: str = ""
+    #: 레퍼런스를 따로 쌓을 DB (선택)
+    reference_database_id: str = ""
+    #: 이 상태이거나 비어 있는 행을 처리 대상으로 본다
+    trigger_status: list[str] = field(
+        default_factory=lambda: ["요청", "대기", "todo", "not started", "새 요청"]
+    )
+    #: 처리 완료 후 기록할 상태 (첫 값을 사용)
+    done_status: list[str] = field(default_factory=lambda: ["완료", "done"])
+    failed_status: str = "실패"
+    card_count: int = 6
+    #: 자동 감지가 틀릴 때 논리 필드 → 실제 칼럼명을 직접 지정
+    #: 예) {"topic": "콘텐츠 제목", "status": "진행 상태"}
+    properties: dict[str, str] = field(default_factory=dict)
+
+
+@dataclass
 class Settings:
     sources: list[SourceRule] = field(default_factory=list)
     collect: CollectConfig = field(default_factory=CollectConfig)
     ranking: RankingConfig = field(default_factory=RankingConfig)
     slack: SlackConfig = field(default_factory=SlackConfig)
     figma: FigmaConfig = field(default_factory=FigmaConfig)
+    notion: NotionConfig = field(default_factory=NotionConfig)
     db_path: Path = AUTOMATION_ROOT / "data" / "references.db"
     out_dir: Path = AUTOMATION_ROOT / "out"
 
@@ -119,6 +139,10 @@ class Settings:
     @property
     def figma_token(self) -> str:
         return env("FIGMA_TOKEN")
+
+    @property
+    def notion_token(self) -> str:
+        return env("NOTION_TOKEN")
 
     def queries_for(self, platform: str) -> list[SourceRule]:
         return [r for r in self.sources if r.applies_to(platform)]
@@ -151,6 +175,7 @@ def load_settings(config_dir: Path | None = None) -> Settings:
         ("ranking", settings.ranking),
         ("slack", settings.slack),
         ("figma", settings.figma),
+        ("notion", settings.notion),
     ):
         for key, value in (raw.get(section) or {}).items():
             if hasattr(target, key):
@@ -161,11 +186,15 @@ def load_settings(config_dir: Path | None = None) -> Settings:
     if raw.get("out_dir"):
         settings.out_dir = (AUTOMATION_ROOT / str(raw["out_dir"])).resolve()
 
-    # 환경변수로 Figma 파일 키를 덮어쓸 수 있게 (CI에서 편함)
+    # 환경변수로 덮어쓸 수 있게 (CI에서 편함)
     if env("FIGMA_FILE_KEY"):
         settings.figma.file_key = env("FIGMA_FILE_KEY")
     if env("SLACK_DIGEST_CHANNEL"):
         settings.slack.digest_channel = env("SLACK_DIGEST_CHANNEL")
+    if env("NOTION_DATABASE_ID"):
+        settings.notion.database_id = env("NOTION_DATABASE_ID")
+    if env("NOTION_REFERENCE_DATABASE_ID"):
+        settings.notion.reference_database_id = env("NOTION_REFERENCE_DATABASE_ID")
 
     settings.db_path.parent.mkdir(parents=True, exist_ok=True)
     settings.out_dir.mkdir(parents=True, exist_ok=True)

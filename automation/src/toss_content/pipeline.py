@@ -144,13 +144,39 @@ def export_from_figma(
     )
 
 
-def run_daily(settings: Settings, store: Store) -> dict:
+def run_notion_fill(settings: Settings, store: Store, limit: int = 5) -> dict:
+    """Notion 콘텐츠 목록에서 대기 중인 행을 채운다. 설정이 없으면 조용히 건너뛴다."""
+    if not (settings.notion_token and settings.notion.database_id):
+        log.info("Notion 설정이 없어 건너뜁니다.")
+        return {"skipped": True, "filled": 0}
+
+    from .notion import from_settings as notion_from_settings
+    from .notion import run_fill
+
+    try:
+        results = run_fill(notion_from_settings(settings), settings, store, limit=limit)
+    except Exception as exc:
+        # Notion 문제로 수집·다이제스트까지 실패 처리되면 안 된다.
+        log.warning("Notion 처리 실패: %s", exc)
+        return {"skipped": False, "filled": 0, "error": str(exc)}
+
+    return {
+        "skipped": False,
+        "filled": sum(1 for r in results if r.status == "filled"),
+        "failed": sum(1 for r in results if r.status == "failed"),
+        "topics": [r.topic for r in results],
+    }
+
+
+def run_daily(settings: Settings, store: Store, notion_limit: int = 5) -> dict:
     """GitHub Actions가 하루 한 번 돌리는 기본 루틴."""
     collected = run_collect(settings, store)
     digest = run_digest(settings, store)
+    notion = run_notion_fill(settings, store, limit=notion_limit)
     return {
         "fetched": collected.fetched,
         "inserted": collected.inserted,
         "by_platform": collected.by_platform,
         "digest": digest,
+        "notion": notion,
     }
